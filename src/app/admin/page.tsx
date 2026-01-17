@@ -127,9 +127,9 @@ export default function AdminPanel() {
       case "pending":
         return "bg-yellow-100 text-yellow-800";
       case "processing":
-        return "bg-blue-100 text-blue-400";
+        return "bg-blue-100 text-blue-200";
       case "cancelled":
-        return "bg-blue-100 text-blue-400";
+        return "bg-blue-100 text-blue-200";
       default:
         return "bg-gray-100 text-gray-800";
     }
@@ -142,7 +142,7 @@ export default function AdminPanel() {
       case "low_stock":
         return "bg-orange-100 text-orange-800";
       case "out_of_stock":
-        return "bg-blue-100 text-blue-400";
+        return "bg-blue-100 text-blue-200";
       default:
         return "bg-gray-100 text-gray-800";
     }
@@ -153,7 +153,7 @@ export default function AdminPanel() {
       {/* Header */}
       <div className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 py-4">
-          <h1 className="text-2xl font-bold text-blue-400">Admin Panel</h1>
+          <h1 className="text-2xl font-bold text-blue-200">Admin Panel</h1>
           <p className="text-gray-600">Manage your store</p>
         </div>
       </div>
@@ -166,8 +166,8 @@ export default function AdminPanel() {
               onClick={() => setActiveTab("dashboard")}
               className={`flex items-center gap-2 px-6 py-4 font-medium whitespace-nowrap transition-colors ${
                 activeTab === "dashboard"
-                  ? "text-blue-400 border-b-2 border-blue-400"
-                  : "text-gray-600 hover:text-blue-400"
+                  ? "text-blue-200 border-b-2 border-blue-200"
+                  : "text-gray-600 hover:text-blue-200"
               }`}
             >
               <BarChart3 size={20} />
@@ -177,8 +177,8 @@ export default function AdminPanel() {
               onClick={() => setActiveTab("products")}
               className={`flex items-center gap-2 px-6 py-4 font-medium whitespace-nowrap transition-colors ${
                 activeTab === "products"
-                  ? "text-blue-400 border-b-2 border-blue-400"
-                  : "text-gray-600 hover:text-blue-400"
+                  ? "text-blue-200 border-b-2 border-blue-200"
+                  : "text-gray-600 hover:text-blue-200"
               }`}
             >
               <Package size={20} />
@@ -188,8 +188,8 @@ export default function AdminPanel() {
               onClick={() => setActiveTab("orders")}
               className={`flex items-center gap-2 px-6 py-4 font-medium whitespace-nowrap transition-colors ${
                 activeTab === "orders"
-                  ? "text-blue-400 border-b-2 border-blue-400"
-                  : "text-gray-600 hover:text-blue-400"
+                  ? "text-blue-200 border-b-2 border-blue-200"
+                  : "text-gray-600 hover:text-blue-200"
               }`}
             >
               <ShoppingBag size={20} />
@@ -199,8 +199,8 @@ export default function AdminPanel() {
               onClick={() => setActiveTab("users")}
               className={`flex items-center gap-2 px-6 py-4 font-medium whitespace-nowrap transition-colors ${
                 activeTab === "users"
-                  ? "text-blue-400 border-b-2 border-blue-400"
-                  : "text-gray-600 hover:text-blue-400"
+                  ? "text-blue-200 border-b-2 border-blue-200"
+                  : "text-gray-600 hover:text-blue-200"
               }`}
             >
               <Users size={20} />
@@ -222,7 +222,7 @@ export default function AdminPanel() {
                       {stats.totalProducts}
                     </p>
                   </div>
-                  <Package className="text-blue-400" size={40} />
+                  <Package className="text-blue-200" size={40} />
                 </div>
               </div>
 
@@ -234,7 +234,7 @@ export default function AdminPanel() {
                       {stats.totalOrders}
                     </p>
                   </div>
-                  <ShoppingBag className="text-blue-400" size={40} />
+                  <ShoppingBag className="text-blue-200" size={40} />
                 </div>
               </div>
 
@@ -297,7 +297,7 @@ export default function AdminPanel() {
                           </span>
                         </td>
                         <td className="py-3 px-4">
-                          <button className="text-blue-400 hover:text-blue-300">
+                          <button className="text-blue-200 hover:text-blue-200">
                             <Eye size={18} />
                           </button>
                         </td>
@@ -326,10 +326,10 @@ export default function AdminPanel() {
                     placeholder="Search products..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-300 focus:border-transparent"
+                    className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-200 focus:border-transparent"
                   />
                 </div>
-                <button className="bg-blue-400 text-white px-6 py-2 rounded-lg hover:bg-blue-300 transition-colors flex items-center gap-2 whitespace-nowrap">
+                <button className="bg-blue-200 text-white px-6 py-2 rounded-lg hover:bg-blue-200 transition-colors flex items-center gap-2 whitespace-nowrap">
                   <Plus size={20} />
                   Add Product
                 </button>
@@ -378,10 +378,10 @@ export default function AdminPanel() {
                         </td>
                         <td className="py-3 px-4">
                           <div className="flex gap-2">
-                            <button className="text-blue-400 hover:text-blue-300">
+                            <button className="text-blue-200 hover:text-blue-200">
                               <Edit size={18} />
                             </button>
-                            <button className="text-blue-400 hover:text-blue-300">
+                            <button className="text-blue-200 hover:text-blue-200">
                               <Trash2 size={18} />
                             </button>
                           </div>
@@ -411,10 +411,10 @@ export default function AdminPanel() {
                     placeholder="Search orders..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-300 focus:border-transparent"
+                    className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-200 focus:border-transparent"
                   />
                 </div>
-                <select className="px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-300 focus:border-transparent">
+                <select className="px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-200 focus:border-transparent">
                   <option value="">All Status</option>
                   <option value="pending">Pending</option>
                   <option value="processing">Processing</option>
@@ -465,11 +465,11 @@ export default function AdminPanel() {
                             >
                               <CheckCircle size={18} />
                             </button>
-                            <button className="text-blue-400 hover:text-blue-300">
+                            <button className="text-blue-200 hover:text-blue-200">
                               <Eye size={18} />
                             </button>
                             <button
-                              className="text-blue-400 hover:text-blue-300"
+                              className="text-blue-200 hover:text-blue-200"
                               title="Cancel"
                             >
                               <XCircle size={18} />
@@ -500,7 +500,7 @@ export default function AdminPanel() {
                   placeholder="Search users..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-300 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-200 focus:border-transparent"
                 />
               </div>
             </div>
@@ -530,10 +530,10 @@ export default function AdminPanel() {
                         <td className="py-3 px-4">{user.joined}</td>
                         <td className="py-3 px-4">
                           <div className="flex gap-2">
-                            <button className="text-blue-400 hover:text-blue-300">
+                            <button className="text-blue-200 hover:text-blue-200">
                               <Eye size={18} />
                             </button>
-                            <button className="text-blue-400 hover:text-blue-300">
+                            <button className="text-blue-200 hover:text-blue-200">
                               <Trash2 size={18} />
                             </button>
                           </div>
