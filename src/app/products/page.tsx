@@ -2,6 +2,7 @@ import { getProducts } from "@/lib/products";
 import ProductCard from "@/components/ProductCard";
 import { Metadata } from "next";
 import Link from "next/link";
+import { Package } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Products - Sali Products Kenya",
@@ -20,64 +21,96 @@ export default async function ProductsPage({
     : allProducts;
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-8">Our Products</h1>
-
-      {/* Filter Buttons */}
-      <div className="flex flex-wrap gap-4 mb-8">
-        <Link
-          href="/products"
-          className={`px-6 py-2 rounded-lg transition font-semibold ${
-            !category
-              ? "bg-red-600 text-white shadow-md"
-              : "bg-white text-gray-700 hover:bg-red-50 border-2 border-gray-200"
-          }`}
-        >
-          All Products
-        </Link>
-        <Link
-          href="/products?category=tools"
-          className={`px-6 py-2 rounded-lg transition font-semibold ${
-            category === "tools"
-              ? "bg-red-600 text-white shadow-md"
-              : "bg-white text-gray-700 hover:bg-red-50 border-2 border-gray-200"
-          }`}
-        >
-          Tools
-        </Link>
-        <Link
-          href="/products?category=machines"
-          className={`px-6 py-2 rounded-lg transition font-semibold ${
-            category === "machines"
-              ? "bg-red-600 text-white shadow-md"
-              : "bg-white text-gray-700 hover:bg-red-50 border-2 border-gray-200"
-          }`}
-        >
-          Machines
-        </Link>
-        <Link
-          href="/products?category=supplies"
-          className={`px-6 py-2 rounded-lg transition font-semibold ${
-            category === "supplies"
-              ? "bg-red-600 text-white shadow-md"
-              : "bg-white text-gray-700 hover:bg-red-50 border-2 border-gray-200"
-          }`}
-        >
-          Supplies
-        </Link>
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      {/* Header Section */}
+      <div className="bg-gradient-to-r from-red-600 to-red-700 text-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center gap-4 mb-4">
+            <Package size={48} className="text-yellow-300" />
+            <div>
+              <h1 className="text-5xl font-bold">Our Products</h1>
+              <p className="text-red-100 text-lg mt-2">Discover quality tools and machines for every need</p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      {/* Products Grid */}
-      {products.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
+      <div className="container mx-auto px-4 py-8">
+        {/* Filter Section */}
+        <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
+          <h3 className="text-lg font-semibold mb-4 text-gray-700">Filter by Category</h3>
+          <div className="flex flex-wrap gap-3">
+            <Link
+              href="/products"
+              className={`px-6 py-3 rounded-xl transition-all font-semibold ${
+                !category
+                  ? "bg-gradient-to-r from-red-600 to-red-700 text-white shadow-lg shadow-red-500/30 scale-105"
+                  : "bg-gray-100 text-gray-700 hover:bg-red-50 hover:text-red-600 border-2 border-gray-200"
+              }`}
+            >
+              All Products
+            </Link>
+            <Link
+              href="/products?category=tools"
+              className={`px-6 py-3 rounded-xl transition-all font-semibold ${
+                category === "tools"
+                  ? "bg-gradient-to-r from-red-600 to-red-700 text-white shadow-lg shadow-red-500/30 scale-105"
+                  : "bg-gray-100 text-gray-700 hover:bg-red-50 hover:text-red-600 border-2 border-gray-200"
+              }`}
+            >
+              🔧 Tools
+            </Link>
+            <Link
+              href="/products?category=machines"
+              className={`px-6 py-3 rounded-xl transition-all font-semibold ${
+                category === "machines"
+                  ? "bg-gradient-to-r from-red-600 to-red-700 text-white shadow-lg shadow-red-500/30 scale-105"
+                  : "bg-gray-100 text-gray-700 hover:bg-red-50 hover:text-red-600 border-2 border-gray-200"
+              }`}
+            >
+              ⚙️ Machines
+            </Link>
+            <Link
+              href="/products?category=supplies"
+              className={`px-6 py-3 rounded-xl transition-all font-semibold ${
+                category === "supplies"
+                  ? "bg-gradient-to-r from-red-600 to-red-700 text-white shadow-lg shadow-red-500/30 scale-105"
+                  : "bg-gray-100 text-gray-700 hover:bg-red-50 hover:text-red-600 border-2 border-gray-200"
+              }`}
+            >
+              📦 Supplies
+            </Link>
+          </div>
         </div>
-      ) : (
-        <div className="text-center py-12">
-          <p className="text-gray-600 text-lg">No products found in this category.</p>
+
+        {/* Results Info */}
+        <div className="mb-6">
+          <p className="text-gray-600 text-lg">
+            <span className="font-semibold text-red-600">{products.length}</span> {category ? `${category}` : 'products'} found
+          </p>
         </div>
+
+        {/* Products Grid */}
+        {products.length > 0 ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {products.map((product, index) => (
+              <div
+                key={product.id}
+                className="animate-[fadeIn_0.5s_ease-in]"
+                style={{ animationDelay: `${index * 0.05}s`, animationFillMode: 'both' }}
+              >
+                <ProductCard product={product} />
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-20 bg-white rounded-2xl shadow-lg">
+            <Package size={64} className="text-gray-300 mx-auto mb-4" />
+            <p className="text-gray-600 text-xl font-semibold">No products found in this category.</p>
+            <Link href="/products" className="text-red-600 hover:underline mt-4 inline-block">
+              View all products
+            </Link>
+          </div>
       )}
     </div>
   );
