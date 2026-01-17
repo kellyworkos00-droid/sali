@@ -8,7 +8,7 @@ export async function GET(
 ) {
   try {
     const { id } = await params;
-    const product = getProductById(parseInt(id));
+    const product = getProductById(id);
     
     if (!product) {
       return NextResponse.json(
@@ -42,7 +42,7 @@ export async function PUT(
     return NextResponse.json({
       success: true,
       message: "Product updated successfully",
-      data: { id: parseInt(id), ...updates },
+      data: { id, ...updates },
     });
   } catch (error) {
     return NextResponse.json(
