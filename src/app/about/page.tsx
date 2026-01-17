@@ -12,7 +12,7 @@ export default function AboutPage() {
 
       <div className="max-w-4xl mx-auto">
         <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-          <h2 className="text-3xl font-bold mb-4 text-primary-600">Our Story</h2>
+          <h2 className="text-3xl font-bold mb-4 text-red-600">Our Story</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
             Sali Products Kenya has been serving the Kenyan market for over a decade, providing
             high-quality tools, machines, and industrial supplies to businesses and individuals
@@ -21,28 +21,28 @@ export default function AboutPage() {
           </p>
           <p className="text-gray-700 leading-relaxed">
             We understand the importance of having reliable equipment and tools for your projects,
-            whether you're a professional contractor, a manufacturing facility, or a DIY enthusiast.
-            That's why we source only the best products from reputable manufacturers worldwide.
+            whether you&apos;re a professional contractor, a manufacturing facility, or a DIY enthusiast.
+            That&apos;s why we source only the best products from reputable manufacturers worldwide.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 mb-8">
-          <div className="bg-primary-50 p-6 rounded-lg">
-            <h3 className="text-2xl font-bold text-primary-600 mb-3">10+</h3>
+          <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-600">
+            <h3 className="text-2xl font-bold text-red-600 mb-3">10+</h3>
             <p className="text-gray-700">Years of Experience</p>
           </div>
-          <div className="bg-primary-50 p-6 rounded-lg">
-            <h3 className="text-2xl font-bold text-primary-600 mb-3">5000+</h3>
+          <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-600">
+            <h3 className="text-2xl font-bold text-red-600 mb-3">5000+</h3>
             <p className="text-gray-700">Products Available</p>
           </div>
-          <div className="bg-primary-50 p-6 rounded-lg">
-            <h3 className="text-2xl font-bold text-primary-600 mb-3">1000+</h3>
+          <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-600">
+            <h3 className="text-2xl font-bold text-red-600 mb-3">1000+</h3>
             <p className="text-gray-700">Happy Customers</p>
           </div>
         </div>
 
         <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-          <h2 className="text-3xl font-bold mb-4 text-primary-600">Our Mission</h2>
+          <h2 className="text-3xl font-bold mb-4 text-red-600">Our Mission</h2>
           <p className="text-gray-700 leading-relaxed">
             To provide Kenyan businesses and individuals with access to world-class tools,
             machines, and supplies at competitive prices, backed by exceptional customer service
@@ -52,10 +52,10 @@ export default function AboutPage() {
         </div>
 
         <div className="bg-white rounded-lg shadow-md p-8">
-          <h2 className="text-3xl font-bold mb-4 text-primary-600">Why Choose Us?</h2>
+          <h2 className="text-3xl font-bold mb-4 text-red-600">Why Choose Us?</h2>
           <ul className="space-y-3 text-gray-700">
             <li className="flex items-start gap-2">
-              <span className="text-primary-600 font-bold">✓</span>
+              <span className="text-red-600 font-bold">✓</span>
               <span>Wide selection of genuine, high-quality products</span>
             </li>
             <li className="flex items-start gap-2">

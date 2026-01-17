@@ -25,7 +25,7 @@ export default function ContactPage() {
       <h1 className="text-5xl font-bold mb-4 text-center">Contact Us</h1>
       <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
         Have questions about our products or services? Get in touch with us and
-        we'll be happy to help you.
+        we&apos;ll be happy to help you.
       </p>
 
       <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
@@ -99,7 +99,7 @@ export default function ContactPage() {
 
             <button
               type="submit"
-              className="w-full bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition"
+              className="w-full bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition"
             >
               Send Message
             </button>
@@ -112,7 +112,7 @@ export default function ContactPage() {
             <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <MapPin className="text-primary-600 flex-shrink-0" size={24} />
+                <MapPin className="text-red-600 flex-shrink-0" size={24} />
                 <div>
                   <h3 className="font-semibold mb-1">Address</h3>
                   <p className="text-gray-600">
@@ -123,7 +123,7 @@ export default function ContactPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <Phone className="text-primary-600 flex-shrink-0" size={24} />
+                <Phone className="text-red-600 flex-shrink-0" size={24} />
                 <div>
                   <h3 className="font-semibold mb-1">Phone</h3>
                   <p className="text-gray-600">+254 700 000 000</p>
@@ -132,7 +132,7 @@ export default function ContactPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <Mail className="text-primary-600 flex-shrink-0" size={24} />
+                <Mail className="text-red-600 flex-shrink-0" size={24} />
                 <div>
                   <h3 className="font-semibold mb-1">Email</h3>
                   <p className="text-gray-600">info@saliproducts.co.ke</p>
@@ -142,7 +142,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="bg-primary-50 rounded-lg p-8">
+          <div className="bg-red-50 rounded-lg p-8 border-l-4 border-red-600">
             <h3 className="text-xl font-bold mb-4">Business Hours</h3>
             <div className="space-y-2 text-gray-700">
               <div className="flex justify-between">

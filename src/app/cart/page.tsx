@@ -16,7 +16,7 @@ export default function CartPage() {
         <p className="text-gray-600 mb-8">Add some products to get started!</p>
         <Link
           href="/products"
-          className="bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition inline-block"
+          className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition inline-block"
         >
           Shop Now
         </Link>
@@ -100,7 +100,7 @@ export default function CartPage() {
               </div>
               <div className="border-t pt-3 flex justify-between text-xl">
                 <span className="font-bold">Total</span>
-                <span className="font-bold text-primary-600">
+                <span className="font-bold text-red-600">
                   {formatPrice(getTotalPrice())}
                 </span>
               </div>
@@ -108,14 +108,14 @@ export default function CartPage() {
 
             <Link
               href="/checkout"
-              className="block w-full bg-primary-600 text-white text-center px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition"
+              className="block w-full bg-red-600 text-white text-center px-8 py-4 rounded-lg font-semibold hover:bg-red-700 transition"
             >
               Proceed to Checkout
             </Link>
 
             <Link
               href="/products"
-              className="block w-full text-center mt-4 text-primary-600 hover:text-primary-700 transition"
+              className="block w-full text-center mt-4 text-red-600 hover:text-red-700 transition"
             >
               Continue Shopping
             </Link>

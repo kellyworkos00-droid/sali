@@ -25,7 +25,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             {product.description}
           </p>
           <div className="flex items-center justify-between">
-            <span className="text-primary-600 font-bold text-xl">
+            <span className="text-red-600 font-bold text-xl">
               {formatPrice(product.price)}
             </span>
             {product.stock > 0 ? (

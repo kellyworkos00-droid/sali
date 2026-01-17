@@ -55,7 +55,7 @@ export default function AddToCartButton({ product }: AddToCartButtonProps) {
       <button
         onClick={handleAddToCart}
         disabled={product.stock === 0}
-        className="bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition flex items-center justify-center gap-2 disabled:bg-gray-400 disabled:cursor-not-allowed"
+        className="bg-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-700 transition flex items-center justify-center gap-2 disabled:bg-gray-400 disabled:cursor-not-allowed"
       >
         <ShoppingCart size={20} />
         Add to Cart

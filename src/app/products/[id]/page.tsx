@@ -27,7 +27,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
         {/* Product Info */}
         <div className="flex flex-col">
           <h1 className="text-4xl font-bold mb-4">{product.name}</h1>
-          <p className="text-3xl text-primary-600 font-bold mb-6">
+          <p className="text-3xl text-red-600 font-bold mb-6">
             {formatPrice(product.price)}
           </p>
 
@@ -58,7 +58,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
             </p>
             <a
               href="/contact"
-              className="text-primary-600 hover:text-primary-700 font-semibold"
+              className="text-red-600 hover:text-red-700 font-semibold"
             >
               Contact Us →
             </a>

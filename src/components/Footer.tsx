@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from "lucide-react";
+import SaliLogo from "./SaliLogo";
 
 export default function Footer() {
   return (
@@ -8,18 +9,20 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-white text-xl font-bold mb-4">Sali Products Kenya</h3>
+            <div className="mb-4">
+              <SaliLogo width={160} height={64} />
+            </div>
             <p className="text-sm mb-4">
               Your trusted partner for quality tools, machines, and industrial supplies in Kenya.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-primary-400 transition">
+              <a href="#" className="hover:text-red-400 transition">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="hover:text-primary-400 transition">
+              <a href="#" className="hover:text-red-400 transition">
                 <Twitter size={20} />
               </a>
-              <a href="#" className="hover:text-primary-400 transition">
+              <a href="#" className="hover:text-red-400 transition">
                 <Instagram size={20} />
               </a>
             </div>
@@ -30,7 +33,7 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/products" className="hover:text-primary-400 transition">
+                <Link href="/products" className="hover:text-red-400 transition">
                   Products
                 </Link>
               </li>

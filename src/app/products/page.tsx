@@ -23,46 +23,46 @@ export default function ProductsPage({
 
       {/* Filter Buttons */}
       <div className="flex flex-wrap gap-4 mb-8">
-        <a
+        <Link
           href="/products"
-          className={`px-6 py-2 rounded-lg transition ${
+          className={`px-6 py-2 rounded-lg transition font-semibold ${
             !searchParams.category
-              ? "bg-primary-600 text-white"
-              : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+              ? "bg-red-600 text-white shadow-md"
+              : "bg-white text-gray-700 hover:bg-red-50 border-2 border-gray-200"
           }`}
         >
           All Products
-        </a>
-        <a
+        </Link>
+        <Link
           href="/products?category=tools"
-          className={`px-6 py-2 rounded-lg transition ${
+          className={`px-6 py-2 rounded-lg transition font-semibold ${
             searchParams.category === "tools"
-              ? "bg-primary-600 text-white"
-              : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+              ? "bg-red-600 text-white shadow-md"
+              : "bg-white text-gray-700 hover:bg-red-50 border-2 border-gray-200"
           }`}
         >
           Tools
-        </a>
-        <a
+        </Link>
+        <Link
           href="/products?category=machines"
-          className={`px-6 py-2 rounded-lg transition ${
+          className={`px-6 py-2 rounded-lg transition font-semibold ${
             searchParams.category === "machines"
-              ? "bg-primary-600 text-white"
-              : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+              ? "bg-red-600 text-white shadow-md"
+              : "bg-white text-gray-700 hover:bg-red-50 border-2 border-gray-200"
           }`}
         >
           Machines
-        </a>
-        <a
+        </Link>
+        <Link
           href="/products?category=supplies"
-          className={`px-6 py-2 rounded-lg transition ${
+          className={`px-6 py-2 rounded-lg transition font-semibold ${
             searchParams.category === "supplies"
-              ? "bg-primary-600 text-white"
-              : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+              ? "bg-red-600 text-white shadow-md"
+              : "bg-white text-gray-700 hover:bg-red-50 border-2 border-gray-200"
           }`}
         >
           Supplies
-        </a>
+        </Link>
       </div>
 
       {/* Products Grid */}
