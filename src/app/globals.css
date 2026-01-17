@@ -2,6 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes zoom {
+    0%, 100% {
+      transform: scale(1.05);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(80px);
+    }
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

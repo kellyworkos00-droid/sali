@@ -1,48 +1,103 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Wrench, Package, Truck } from "lucide-react";
+import { ArrowRight, Wrench, Package, Truck, Shield, Award, Star } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative text-white py-32 overflow-hidden min-h-[600px] flex items-center">
-        {/* Background Image */}
-        <Image
-          src="/herro.jpeg"
-          alt="Sali Products - Tools and Machinery"
-          fill
-          className="object-cover"
-          priority
-        />
+      <section className="relative text-white overflow-hidden min-h-[700px] flex items-center">
+        {/* Background Image with Zoom Animation */}
+        <div className="absolute inset-0 scale-105 animate-[zoom_20s_ease-in-out_infinite]">
+          <Image
+            src="/herro.jpeg"
+            alt="Sali Products - Tools and Machinery"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
         
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-black/50"></div>
+        {/* Gradient Overlays */}
+        <div className="absolute inset-0 bg-gradient-to-r from-red-900/90 via-black/80 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
         
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">
-              Quality Tools & Machines for Every Job
+        {/* Animated Pattern Overlay */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 animate-[slide_30s_linear_infinite]" style={{
+            backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(255,255,255,.05) 40px, rgba(255,255,255,.05) 80px)'
+          }}></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10 py-20">
+          <div className="max-w-3xl space-y-8">
+            {/* Trust Badges */}
+            <div className="flex flex-wrap gap-4 animate-[fadeIn_1s_ease-in]">
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
+                <Shield className="text-yellow-400" size={20} />
+                <span className="text-sm font-medium">Trusted Quality</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
+                <Award className="text-yellow-400" size={20} />
+                <span className="text-sm font-medium">10+ Years</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
+                <Star className="text-yellow-400" size={20} />
+                <span className="text-sm font-medium">5000+ Products</span>
+              </div>
+            </div>
+
+            {/* Main Heading with Animation */}
+            <h1 className="text-5xl md:text-7xl font-extrabold leading-tight animate-[slideUp_1s_ease-out]">
+              <span className="block mb-2">Quality Tools &</span>
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-300 to-yellow-300">
+                Machines for Every Job
+              </span>
             </h1>
-            <p className="text-xl mb-8 text-gray-100 drop-shadow-md">
-              Sali Products Kenya is your trusted supplier of premium tools, machines, and industrial supplies across Kenya.
+            
+            {/* Description */}
+            <p className="text-xl md:text-2xl text-gray-100 leading-relaxed animate-[slideUp_1s_ease-out_0.2s_both]">
+              Sali Products Kenya is your trusted supplier of <span className="text-yellow-300 font-semibold">premium tools</span>, <span className="text-yellow-300 font-semibold">machines</span>, and <span className="text-yellow-300 font-semibold">industrial supplies</span> across Kenya.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-4 animate-[slideUp_1s_ease-out_0.4s_both]">
               <Link
                 href="/products"
-                className="bg-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-700 transition flex items-center justify-center gap-2 shadow-xl"
+                className="group relative bg-red-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-red-700 transition-all duration-300 flex items-center justify-center gap-3 shadow-2xl hover:shadow-red-500/50 hover:scale-105 overflow-hidden"
               >
-                Shop Now <ArrowRight size={20} />
+                <span className="absolute inset-0 bg-gradient-to-r from-red-500 to-red-700 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                <span className="relative">Shop Now</span>
+                <ArrowRight className="relative group-hover:translate-x-1 transition-transform" size={24} />
               </Link>
               <Link
                 href="/contact"
-                className="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition shadow-xl"
+                className="group bg-white/10 backdrop-blur-md border-2 border-white text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300 shadow-xl hover:scale-105"
               >
                 Contact Us
               </Link>
             </div>
+
+            {/* Quick Stats */}
+            <div className="grid grid-cols-3 gap-6 pt-8 animate-[fadeIn_1s_ease-in_0.6s_both]">
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-yellow-300 mb-1">5000+</div>
+                <div className="text-sm md:text-base text-gray-300">Products</div>
+              </div>
+              <div className="text-center border-l border-r border-white/20">
+                <div className="text-3xl md:text-4xl font-bold text-yellow-300 mb-1">10+</div>
+                <div className="text-sm md:text-base text-gray-300">Years Experience</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-yellow-300 mb-1">1000+</div>
+                <div className="text-sm md:text-base text-gray-300">Happy Clients</div>
+              </div>
+            </div>
           </div>
         </div>
+
+        {/* Decorative Elements */}
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent"></div>
       </section>
 
       {/* Features Section */}
