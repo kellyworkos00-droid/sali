@@ -18,7 +18,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/logo.jpeg"
+              src="/logo.png"
               alt="Sali Products Kenya"
               width={180}
               height={90}

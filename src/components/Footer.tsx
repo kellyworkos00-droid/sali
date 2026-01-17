@@ -11,7 +11,7 @@ export default function Footer() {
           <div>
             <div className="mb-4 bg-white p-3 rounded-lg inline-block">
               <Image
-                src="/logo.jpeg"
+                src="/logo.png"
                 alt="Sali Products Kenya"
                 width={160}
                 height={80}
@@ -22,13 +22,13 @@ export default function Footer() {
               Your trusted partner for quality tools, machines, and industrial supplies in Kenya.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-red-400 transition">
+              <a href="#" className="hover:text-blue-400 transition">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="hover:text-red-400 transition">
+              <a href="#" className="hover:text-blue-400 transition">
                 <Twitter size={20} />
               </a>
-              <a href="#" className="hover:text-red-400 transition">
+              <a href="#" className="hover:text-blue-400 transition">
                 <Instagram size={20} />
               </a>
             </div>
