@@ -2,6 +2,8 @@
 
 import { Award, Target, Users, Zap, Shield, TrendingUp } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+
+export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
