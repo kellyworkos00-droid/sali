@@ -2,10 +2,11 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ShoppingCart, Menu, X, Search, User } from "lucide-react";
+import { ShoppingCart, Menu, X, Search, User, Heart } from "lucide-react";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useCartStore } from "@/store/cartStore";
+import { useWishlistStore } from "@/store/wishlistStore";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,7 +14,9 @@ export default function Navbar() {
   const [showSearch, setShowSearch] = useState(false);
   const router = useRouter();
   const { items } = useCartStore();
+  const { items: wishlistItems } = useWishlistStore();
   const cartItemsCount = items.reduce((sum, item) => sum + item.quantity, 0);
+  const wishlistCount = wishlistItems.length;
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -64,6 +67,14 @@ export default function Navbar() {
             >
               <Search size={22} />
             </button>
+            <Link href="/wishlist" className="relative text-gray-700 hover:text-red-500 transition">
+              <Heart size={20} />
+              {wishlistCount > 0 && (
+                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold shadow-lg">
+                  {wishlistCount}
+                </span>
+              )}
+            </Link>
             <Link href="/account" className="text-gray-700 hover:text-brand-200 transition">
               <User size={20} />
             </Link>

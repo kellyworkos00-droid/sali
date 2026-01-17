@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { formatPrice } from "@/lib/utils";
 import AddToCartButton from "@/components/AddToCartButton";
+import WishlistButton from "@/components/WishlistButton";
 import { Phone } from "lucide-react";
 
 export default async function ProductPage({ params }: { params: Promise<{ id: string }> }) {
@@ -40,6 +41,10 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
               className="object-cover"
               priority
             />
+            {/* Wishlist Button */}
+            <div className="absolute top-4 left-4">
+              <WishlistButton product={product} />
+            </div>
             {/* Stock Badge */}
             {product.stock > 0 ? (
               <div className="absolute top-4 right-4 bg-green-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">

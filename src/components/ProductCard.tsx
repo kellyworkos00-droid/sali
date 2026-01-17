@@ -1,8 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { formatPrice } from "@/lib/utils";
 import { Product } from "@/lib/products";
 import { ShoppingCart, Eye } from "lucide-react";
+import WishlistButton from "./WishlistButton";
 
 interface ProductCardProps {
   product: Product;
@@ -10,37 +13,38 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
   return (
-    <Link href={`/products/${product.id}`} className="group block perspective-container">
-      <div className="bg-white rounded-lg md:rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-100 transform-3d hover-tilt-3d">
-        <div className="relative h-32 sm:h-40 md:h-56 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden">
-          <Image
-            src={product.image}
-            alt={product.name}
-            fill
-            className="object-cover group-hover:scale-110 transition-transform duration-500"
-          />
-          {/* Overlay on hover */}
-          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
-            <div className="bg-white text-gray-900 p-3 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform">
-              <Eye size={20} />
+    <div className="group block perspective-container relative">
+      <Link href={`/products/${product.id}`}>
+        <div className="bg-white rounded-lg md:rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-100 transform-3d hover-tilt-3d">
+          <div className="relative h-32 sm:h-40 md:h-56 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden">
+            <Image
+              src={product.image}
+              alt={product.name}
+              fill
+              className="object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+            {/* Overlay on hover */}
+            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
+              <div className="bg-white text-gray-900 p-3 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform">
+                <Eye size={20} />
+              </div>
+              <div className="bg-brand-200 text-white p-3 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform delay-75">
+                <ShoppingCart size={20} />
+              </div>
             </div>
-            <div className="bg-brand-200 text-white p-3 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform delay-75">
-              <ShoppingCart size={20} />
+            {/* Stock Badge */}
+            <div className="absolute top-3 right-3">
+              {product.stock > 0 ? (
+                <span className="bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                  In Stock
+                </span>
+              ) : (
+                <span className="bg-brand-200 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                  Out of Stock
+                </span>
+              )}
             </div>
           </div>
-          {/* Stock Badge */}
-          <div className="absolute top-3 right-3">
-            {product.stock > 0 ? (
-              <span className="bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
-                In Stock
-              </span>
-            ) : (
-              <span className="bg-brand-200 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
-                Out of Stock
-              </span>
-            )}
-          </div>
-        </div>
         <div className="p-2 sm:p-3 md:p-5">
           <h3 className="font-bold text-xs sm:text-sm md:text-lg mb-1 md:mb-2 line-clamp-2 text-gray-900 group-hover:text-brand-200 transition-colors">
             {product.name}
@@ -57,7 +61,12 @@ export default function ProductCard({ product }: ProductCardProps) {
             </span>
           </div>
         </div>
+      </Link>
+      
+      {/* Wishlist Button */}
+      <div className="absolute top-3 left-3 z-10" onClick={(e) => e.stopPropagation()}>
+        <WishlistButton product={product} />
       </div>
-    </Link>
+    </div>
   );
 }
