@@ -107,41 +107,41 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <ScrollReveal animation="blur">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Why Choose Us</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-900">Why Choose Us</h2>
           </ScrollReveal>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
             <ScrollReveal animation="fade-up" delay={0}>
-              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-brand-200 hover:shadow-xl transition-shadow">
-                <div className="flex justify-center mb-4">
-                  <Wrench className="text-brand-200" size={48} />
+              <div className="bg-white p-4 md:p-5 rounded-lg shadow-md text-center border-t-4 border-brand-500 hover:shadow-xl transition-shadow">
+                <div className="flex justify-center mb-3">
+                  <Wrench className="text-brand-500" size={40} />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-gray-900">Quality Products</h3>
-                <p className="text-gray-700">
+                <h3 className="text-lg font-semibold mb-2 text-gray-900">Quality Products</h3>
+                <p className="text-gray-600 text-sm">
                   We source only the best tools and machines from trusted manufacturers worldwide.
                 </p>
               </div>
             </ScrollReveal>
             <ScrollReveal animation="fade-up" delay={200}>
-              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-brand-200 hover:shadow-xl transition-shadow">
-                <div className="flex justify-center mb-4">
-                  <Package className="text-brand-200" size={48} />
+              <div className="bg-white p-4 md:p-5 rounded-lg shadow-md text-center border-t-4 border-brand-500 hover:shadow-xl transition-shadow">
+                <div className="flex justify-center mb-3">
+                  <Package className="text-brand-500" size={40} />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-gray-900">Wide Selection</h3>
-                <p className="text-gray-700">
+                <h3 className="text-lg font-semibold mb-2 text-gray-900">Wide Selection</h3>
+                <p className="text-gray-600 text-sm">
                   Browse thousands of products across multiple categories for all your needs.
                 </p>
               </div>
             </ScrollReveal>
             <ScrollReveal animation="fade-up" delay={400}>
-              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-brand-200 hover:shadow-xl transition-shadow">
-                <div className="flex justify-center mb-4">
-                  <Truck className="text-brand-200" size={48} />
+              <div className="bg-white p-4 md:p-5 rounded-lg shadow-md text-center border-t-4 border-brand-500 hover:shadow-xl transition-shadow">
+                <div className="flex justify-center mb-3">
+                  <Truck className="text-brand-500" size={40} />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-gray-900">Fast Delivery</h3>
-                <p className="text-gray-700">
+                <h3 className="text-lg font-semibold mb-2 text-gray-900">Fast Delivery</h3>
+                <p className="text-gray-600 text-sm">
                   Quick and reliable delivery service across Kenya to get your orders to you fast.
                 </p>
               </div>
