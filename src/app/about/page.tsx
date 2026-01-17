@@ -7,7 +7,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-red-600 to-red-700 text-white py-20">
+      <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-6xl font-bold mb-4 animate-[fadeIn_1s_ease-in]">About Sali Products Kenya</h1>
           <p className="text-xl text-red-100 max-w-2xl mx-auto animate-[fadeIn_1s_ease-in_0.2s_both]">
@@ -20,9 +20,9 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto">
           {/* Story Section */}
           <ScrollReveal animation="fade-right">
-            <div className="bg-white rounded-2xl shadow-xl p-10 mb-12 border-t-4 border-red-600">
-            <div className="flex items-center gap-3 mb-6">
-              <Award className="text-red-600" size={32} />
+            <div className="bg-white rounded-2xl shadow-xl p-10 mb-12 border-t-4 border-blue-600">
+              <div className="flex items-center gap-3 mb-6">
+              <Award className="text-blue-600" size={32} />
               <h2 className="text-4xl font-bold text-gray-900">Our Story</h2>
             </div>
             <p className="text-gray-700 leading-relaxed text-lg mb-6">
@@ -44,8 +44,8 @@ export default function AboutPage() {
             <ScrollReveal animation="fade-up" delay={0}>
               <div className="bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border-2 border-red-200 perspective-container transform-3d hover-lift-3d hover:animate-[float3d_3s_ease-in-out_infinite]">
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-5xl font-bold text-red-600">10+</h3>
-                <TrendingUp className="text-red-600" size={40} />
+                <h3 className="text-5xl font-bold text-blue-600">10+</h3>
+                <TrendingUp className="text-blue-600" size={40} />
               </div>
               <p className="text-gray-700 font-semibold text-lg">Years of Experience</p>
             </div>
@@ -72,7 +72,7 @@ export default function AboutPage() {
 
           {/* Mission Section */}
           <ScrollReveal animation="scale">
-          <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-2xl shadow-xl p-10 mb-12 text-white">
+          <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl shadow-xl p-10 mb-12 text-white">
             <div className="flex items-center gap-3 mb-6">
               <Target size={32} />
               <h2 className="text-4xl font-bold">Our Mission</h2>

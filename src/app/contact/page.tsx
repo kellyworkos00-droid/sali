@@ -39,7 +39,7 @@ export default function ContactPage() {
       <div className="container mx-auto px-4 py-16">
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 border-t-4 border-red-600">
+          <div className="bg-white rounded-2xl shadow-xl p-8 border-t-4 border-blue-600">
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Send us a Message</h2>
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
@@ -51,7 +51,7 @@ export default function ContactPage() {
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
                   }
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                   placeholder="Your full name"
                 />
               </div>
@@ -65,7 +65,7 @@ export default function ContactPage() {
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                   placeholder="your.email@example.com"
                 />
             </div>
@@ -78,7 +78,7 @@ export default function ContactPage() {
                 onChange={(e) =>
                   setFormData({ ...formData, phone: e.target.value })
                 }
-                className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
+                className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                 placeholder="+254 700 000 000"
               />
             </div>
@@ -92,7 +92,7 @@ export default function ContactPage() {
                 onChange={(e) =>
                   setFormData({ ...formData, subject: e.target.value })
                 }
-                className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
+                className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                 placeholder="How can we help?"
               />
             </div>
@@ -106,14 +106,14 @@ export default function ContactPage() {
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
                 }
-                className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
+                className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                 placeholder="Tell us more about your inquiry..."
               ></textarea>
             </div>
 
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-red-600 to-red-700 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-red-700 hover:to-red-800 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group"
+              className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-blue-700 hover:to-blue-800 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group"
             >
               <Send className="group-hover:translate-x-1 transition-transform" size={20} />
               Send Message
@@ -123,9 +123,9 @@ export default function ContactPage() {
 
         {/* Contact Information */}
         <div className="space-y-6">
-          <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl shadow-lg p-8 border-2 border-red-200">
+          <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl shadow-lg p-8 border-2 border-blue-200">
             <div className="flex items-center gap-3 mb-6">
-              <div className="bg-red-600 p-3 rounded-full">
+              <div className="bg-blue-600 p-3 rounded-full">
                 <Phone className="text-white" size={24} />
               </div>
               <div>
@@ -133,7 +133,7 @@ export default function ContactPage() {
                 <p className="text-gray-600">Give us a call</p>
               </div>
             </div>
-            <a href="tel:+254700000000" className="text-2xl font-bold text-red-600 hover:text-red-700 transition">
+            <a href="tel:+254700000000" className="text-2xl font-bold text-blue-600 hover:text-blue-700 transition">
               +254 700 000 000
             </a>
           </div>
@@ -168,7 +168,7 @@ export default function ContactPage() {
 
           <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-gray-200">
             <div className="flex items-center gap-3 mb-4">
-              <Clock className="text-red-600" size={24} />
+              <Clock className="text-blue-600" size={24} />
               <h3 className="text-xl font-bold text-gray-900">Business Hours</h3>
             </div>
             <div className="space-y-2 text-gray-700">
@@ -182,7 +182,7 @@ export default function ContactPage() {
               </p>
               <p className="flex justify-between">
                 <span className="font-semibold">Sunday:</span>
-                <span className="text-red-600">Closed</span>
+                <span className="text-blue-600">Closed</span>
               </p>
             </div>
           </div>

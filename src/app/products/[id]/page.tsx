@@ -28,14 +28,14 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
         {/* Product Info */}
         <div className="flex flex-col">
           <h1 className="text-4xl font-bold mb-4">{product.name}</h1>
-          <p className="text-3xl text-red-600 font-bold mb-6">
+          <p className="text-3xl text-blue-600 font-bold mb-6">
             {formatPrice(product.price)}
           </p>
 
           {product.stock > 0 ? (
             <p className="text-green-600 mb-4">✓ In Stock ({product.stock} available)</p>
           ) : (
-            <p className="text-red-600 mb-4">Out of Stock</p>
+            <p className="text-blue-600 mb-4">Out of Stock</p>
           )}
 
           <div className="border-t border-b py-6 mb-6">
@@ -59,7 +59,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
             </p>
             <a
               href="/contact"
-              className="text-red-600 hover:text-red-700 font-semibold"
+              className="text-blue-600 hover:text-blue-700 font-semibold"
             >
               Contact Us →
             </a>

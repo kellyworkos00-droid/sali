@@ -129,7 +129,7 @@ export default function AdminPanel() {
       case "processing":
         return "bg-blue-100 text-blue-800";
       case "cancelled":
-        return "bg-red-100 text-red-800";
+        return "bg-blue-100 text-blue-800";
       default:
         return "bg-gray-100 text-gray-800";
     }
@@ -142,7 +142,7 @@ export default function AdminPanel() {
       case "low_stock":
         return "bg-orange-100 text-orange-800";
       case "out_of_stock":
-        return "bg-red-100 text-red-800";
+        return "bg-blue-100 text-blue-800";
       default:
         return "bg-gray-100 text-gray-800";
     }
@@ -153,7 +153,7 @@ export default function AdminPanel() {
       {/* Header */}
       <div className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 py-4">
-          <h1 className="text-2xl font-bold text-red-600">Admin Panel</h1>
+          <h1 className="text-2xl font-bold text-blue-600">Admin Panel</h1>
           <p className="text-gray-600">Manage your store</p>
         </div>
       </div>
@@ -166,8 +166,8 @@ export default function AdminPanel() {
               onClick={() => setActiveTab("dashboard")}
               className={`flex items-center gap-2 px-6 py-4 font-medium whitespace-nowrap transition-colors ${
                 activeTab === "dashboard"
-                  ? "text-red-600 border-b-2 border-red-600"
-                  : "text-gray-600 hover:text-red-600"
+                  ? "text-blue-600 border-b-2 border-blue-600"
+                  : "text-gray-600 hover:text-blue-600"
               }`}
             >
               <BarChart3 size={20} />
@@ -177,8 +177,8 @@ export default function AdminPanel() {
               onClick={() => setActiveTab("products")}
               className={`flex items-center gap-2 px-6 py-4 font-medium whitespace-nowrap transition-colors ${
                 activeTab === "products"
-                  ? "text-red-600 border-b-2 border-red-600"
-                  : "text-gray-600 hover:text-red-600"
+                  ? "text-blue-600 border-b-2 border-blue-600"
+                  : "text-gray-600 hover:text-blue-600"
               }`}
             >
               <Package size={20} />
@@ -188,8 +188,8 @@ export default function AdminPanel() {
               onClick={() => setActiveTab("orders")}
               className={`flex items-center gap-2 px-6 py-4 font-medium whitespace-nowrap transition-colors ${
                 activeTab === "orders"
-                  ? "text-red-600 border-b-2 border-red-600"
-                  : "text-gray-600 hover:text-red-600"
+                  ? "text-blue-600 border-b-2 border-blue-600"
+                  : "text-gray-600 hover:text-blue-600"
               }`}
             >
               <ShoppingBag size={20} />
@@ -199,8 +199,8 @@ export default function AdminPanel() {
               onClick={() => setActiveTab("users")}
               className={`flex items-center gap-2 px-6 py-4 font-medium whitespace-nowrap transition-colors ${
                 activeTab === "users"
-                  ? "text-red-600 border-b-2 border-red-600"
-                  : "text-gray-600 hover:text-red-600"
+                  ? "text-blue-600 border-b-2 border-blue-600"
+                  : "text-gray-600 hover:text-blue-600"
               }`}
             >
               <Users size={20} />
@@ -222,7 +222,7 @@ export default function AdminPanel() {
                       {stats.totalProducts}
                     </p>
                   </div>
-                  <Package className="text-red-600" size={40} />
+                  <Package className="text-blue-600" size={40} />
                 </div>
               </div>
 
@@ -297,7 +297,7 @@ export default function AdminPanel() {
                           </span>
                         </td>
                         <td className="py-3 px-4">
-                          <button className="text-red-600 hover:text-red-700">
+                          <button className="text-blue-600 hover:text-blue-700">
                             <Eye size={18} />
                           </button>
                         </td>
@@ -326,10 +326,10 @@ export default function AdminPanel() {
                     placeholder="Search products..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
-                <button className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors flex items-center gap-2 whitespace-nowrap">
+                <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2 whitespace-nowrap">
                   <Plus size={20} />
                   Add Product
                 </button>
@@ -381,7 +381,7 @@ export default function AdminPanel() {
                             <button className="text-blue-600 hover:text-blue-700">
                               <Edit size={18} />
                             </button>
-                            <button className="text-red-600 hover:text-red-700">
+                            <button className="text-blue-600 hover:text-blue-700">
                               <Trash2 size={18} />
                             </button>
                           </div>
@@ -411,10 +411,10 @@ export default function AdminPanel() {
                     placeholder="Search orders..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
-                <select className="px-4 py-2 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                <select className="px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                   <option value="">All Status</option>
                   <option value="pending">Pending</option>
                   <option value="processing">Processing</option>
@@ -469,7 +469,7 @@ export default function AdminPanel() {
                               <Eye size={18} />
                             </button>
                             <button
-                              className="text-red-600 hover:text-red-700"
+                              className="text-blue-600 hover:text-blue-700"
                               title="Cancel"
                             >
                               <XCircle size={18} />
@@ -500,7 +500,7 @@ export default function AdminPanel() {
                   placeholder="Search users..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
             </div>
@@ -533,7 +533,7 @@ export default function AdminPanel() {
                             <button className="text-blue-600 hover:text-blue-700">
                               <Eye size={18} />
                             </button>
-                            <button className="text-red-600 hover:text-red-700">
+                            <button className="text-blue-600 hover:text-blue-700">
                               <Trash2 size={18} />
                             </button>
                           </div>
