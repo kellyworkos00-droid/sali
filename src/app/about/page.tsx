@@ -85,7 +85,7 @@ import ScrollReveal from "@/components/ScrollReveal";
           </ScrollReveal>
 
           {/* Why Choose Us Section */}
-          <ScrollReveal animation=\"fade-left\">
+          <ScrollReveal animation="fade-left">
           <div className="bg-white rounded-2xl shadow-xl p-10">
             <div className="flex items-center gap-3 mb-8">
               <Shield className="text-red-600" size={32} />
@@ -130,6 +130,7 @@ import ScrollReveal from "@/components/ScrollReveal";
               </div>
             </div>
           </div>
+          </ScrollReveal>
         </div>
       </div>
     </div>

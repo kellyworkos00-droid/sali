@@ -115,7 +115,8 @@ export default async function ProductsPage({
               View all products
             </Link>
           </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }
