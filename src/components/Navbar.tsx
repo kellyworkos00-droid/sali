@@ -4,12 +4,25 @@ import Link from "next/link";
 import Image from "next/image";
 import { ShoppingCart, Menu, X, Search, User } from "lucide-react";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { useCartStore } from "@/store/cartStore";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [showSearch, setShowSearch] = useState(false);
+  const router = useRouter();
   const { items } = useCartStore();
   const cartItemsCount = items.reduce((sum, item) => sum + item.quantity, 0);
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+      setSearchQuery("");
+      setShowSearch(false);
+    }
+  };
 
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
@@ -45,9 +58,12 @@ export default function Navbar() {
 
           {/* Right Side Icons */}
           <div className="flex items-center space-x-4">
-            <Link href="/search" className="text-brand-200 hover:text-brand-300 transition hover:scale-110">
+            <button 
+              onClick={() => setShowSearch(!showSearch)}
+              className="text-brand-200 hover:text-brand-300 transition hover:scale-110"
+            >
               <Search size={22} />
-            </Link>
+            </button>
             <Link href="/account" className="text-gray-700 hover:text-brand-200 transition">
               <User size={20} />
             </Link>
@@ -101,6 +117,28 @@ export default function Navbar() {
             >
               Contact
             </Link>
+          </div>
+        )}
+
+        {/* Search Bar */}
+        {showSearch && (
+          <div className="py-4 border-t bg-gray-50">
+            <form onSubmit={handleSearch} className="flex gap-2">
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search products..."
+                className="flex-1 px-4 py-2 rounded-lg border border-gray-300 focus:border-brand-500 focus:outline-none"
+                autoFocus
+              />
+              <button
+                type="submit"
+                className="bg-gradient-to-r from-brand-500 to-brand-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-brand-600 hover:to-brand-700 transition"
+              >
+                Search
+              </button>
+            </form>
           </div>
         )}
       </div>
