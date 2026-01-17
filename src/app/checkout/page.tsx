@@ -32,15 +32,20 @@ export default function CheckoutPage() {
 
   if (items.length === 0) {
     return (
-      <div className="container mx-auto px-4 py-16 text-center">
-        <h1 className="text-4xl font-bold mb-4">Your Cart is Empty</h1>
-        <p className="text-gray-600 mb-8">Add some products before checking out!</p>
-        <Link
-          href="/products"
-          className="bg-brand-200 text-white px-8 py-3 rounded-lg font-semibold hover:bg-brand-200 transition inline-block"
-        >
-          Shop Now
-        </Link>
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center bg-white rounded-2xl shadow-lg p-12 max-w-md mx-4">
+          <div className="w-24 h-24 bg-brand-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <CreditCard className="text-brand-600" size={48} />
+          </div>
+          <h1 className="text-3xl font-bold mb-4 text-gray-900">Your Cart is Empty</h1>
+          <p className="text-gray-600 mb-8">Add some products before checking out!</p>
+          <Link
+            href="/products"
+            className="bg-gradient-to-r from-brand-500 to-brand-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-brand-600 hover:to-brand-700 transition inline-block shadow-lg"
+          >
+            Shop Now
+          </Link>
+        </div>
       </div>
     );
   }
