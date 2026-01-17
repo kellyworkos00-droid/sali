@@ -16,7 +16,7 @@ export default function CartPage() {
         <p className="text-gray-600 mb-8">Add some products to get started!</p>
         <Link
           href="/products"
-          className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition inline-block"
+          className="bg-blue-400 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-300 transition inline-block"
         >
           Shop Now
         </Link>
@@ -56,7 +56,7 @@ export default function CartPage() {
                 <div className="flex flex-col items-end justify-between">
                   <button
                     onClick={() => removeItem(item.id)}
-                    className="text-blue-600 hover:text-blue-700 transition"
+                    className="text-blue-400 hover:text-blue-300 transition"
                   >
                     <Trash2 size={20} />
                   </button>
@@ -100,7 +100,7 @@ export default function CartPage() {
               </div>
               <div className="border-t pt-3 flex justify-between text-xl">
                 <span className="font-bold">Total</span>
-                <span className="font-bold text-blue-600">
+                <span className="font-bold text-blue-400">
                   {formatPrice(getTotalPrice())}
                 </span>
               </div>
@@ -108,14 +108,14 @@ export default function CartPage() {
 
             <Link
               href="/checkout"
-              className="block w-full bg-blue-600 text-white text-center px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition"
+              className="block w-full bg-blue-400 text-white text-center px-8 py-4 rounded-lg font-semibold hover:bg-blue-300 transition"
             >
               Proceed to Checkout
             </Link>
 
             <Link
               href="/products"
-              className="block w-full text-center mt-4 text-blue-600 hover:text-blue-700 transition"
+              className="block w-full text-center mt-4 text-blue-400 hover:text-blue-300 transition"
             >
               Continue Shopping
             </Link>

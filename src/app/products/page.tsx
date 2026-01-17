@@ -23,7 +23,7 @@ export default async function ProductsPage({
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Header Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-16">
+      <div className="bg-gradient-to-r from-blue-400 to-blue-300 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="flex items-center gap-4 mb-4">
             <Package size={48} className="text-yellow-300" />
@@ -44,8 +44,8 @@ export default async function ProductsPage({
               href="/products"
               className={`px-6 py-3 rounded-xl transition-all font-semibold flex items-center gap-2 ${
                 !category
-                  ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg shadow-blue-500/30 scale-105"
-                  : "bg-gray-100 text-gray-700 hover:bg-blue-50 hover:text-blue-600 border-2 border-gray-200"
+                  ? "bg-gradient-to-r from-blue-400 to-blue-300 text-white shadow-lg shadow-blue-300/30 scale-105"
+                  : "bg-gray-100 text-gray-700 hover:bg-blue-50 hover:text-blue-400 border-2 border-gray-200"
               }`}
             >
               <Package size={18} />
@@ -55,8 +55,8 @@ export default async function ProductsPage({
               href="/products?category=tools"
               className={`px-6 py-3 rounded-xl transition-all font-semibold flex items-center gap-2 ${
                 category === "tools"
-                  ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg shadow-blue-500/30 scale-105"
-                  : "bg-gray-100 text-gray-700 hover:bg-blue-50 hover:text-blue-600 border-2 border-gray-200"
+                  ? "bg-gradient-to-r from-blue-400 to-blue-300 text-white shadow-lg shadow-blue-300/30 scale-105"
+                  : "bg-gray-100 text-gray-700 hover:bg-blue-50 hover:text-blue-400 border-2 border-gray-200"
               }`}
             >
               <Wrench size={18} />
@@ -66,8 +66,8 @@ export default async function ProductsPage({
               href="/products?category=machines"
               className={`px-6 py-3 rounded-xl transition-all font-semibold flex items-center gap-2 ${
                 category === "machines"
-                  ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg shadow-blue-500/30 scale-105"
-                  : "bg-gray-100 text-gray-700 hover:bg-blue-50 hover:text-blue-600 border-2 border-gray-200"
+                  ? "bg-gradient-to-r from-blue-400 to-blue-300 text-white shadow-lg shadow-blue-300/30 scale-105"
+                  : "bg-gray-100 text-gray-700 hover:bg-blue-50 hover:text-blue-400 border-2 border-gray-200"
               }`}
             >
               <Cog size={18} />
@@ -77,8 +77,8 @@ export default async function ProductsPage({
               href="/products?category=supplies"
               className={`px-6 py-3 rounded-xl transition-all font-semibold flex items-center gap-2 ${
                 category === "supplies"
-                  ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg shadow-blue-500/30 scale-105"
-                  : "bg-gray-100 text-gray-700 hover:bg-blue-50 hover:text-blue-600 border-2 border-gray-200"
+                  ? "bg-gradient-to-r from-blue-400 to-blue-300 text-white shadow-lg shadow-blue-300/30 scale-105"
+                  : "bg-gray-100 text-gray-700 hover:bg-blue-50 hover:text-blue-400 border-2 border-gray-200"
               }`}
             >
               <Box size={18} />
@@ -90,7 +90,7 @@ export default async function ProductsPage({
         {/* Results Info */}
         <div className="mb-6">
           <p className="text-gray-600 text-lg">
-            <span className="font-semibold text-blue-600">{products.length}</span> {category ? `${category}` : 'products'} found
+            <span className="font-semibold text-blue-400">{products.length}</span> {category ? `${category}` : 'products'} found
           </p>
         </div>
 
@@ -111,7 +111,7 @@ export default async function ProductsPage({
           <div className="text-center py-20 bg-white rounded-2xl shadow-lg">
             <Package size={64} className="text-gray-300 mx-auto mb-4" />
             <p className="text-gray-600 text-xl font-semibold">No products found in this category.</p>
-            <Link href="/products" className="text-blue-600 hover:underline mt-4 inline-block">
+            <Link href="/products" className="text-blue-400 hover:underline mt-4 inline-block">
               View all products
             </Link>
           </div>

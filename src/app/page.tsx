@@ -65,9 +65,9 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 pt-4 animate-[slideUp_1s_ease-out_0.4s_both]">
               <Link
                 href="/products"
-                className="group relative bg-blue-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-blue-700 transition-all duration-300 flex items-center justify-center gap-3 shadow-2xl hover:shadow-blue-500/50 overflow-hidden perspective-container transform-3d hover-lift-3d"
+                className="group relative bg-blue-400 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-blue-300 transition-all duration-300 flex items-center justify-center gap-3 shadow-2xl hover:shadow-blue-300/50 overflow-hidden perspective-container transform-3d hover-lift-3d"
               >
-                <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                <span className="absolute inset-0 bg-gradient-to-r from-blue-300 to-blue-300 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                 <span className="relative">Shop Now</span>
                 <ArrowRight className="relative group-hover:translate-x-1 transition-transform" size={24} />
               </Link>
@@ -109,9 +109,9 @@ export default function Home() {
           </ScrollReveal>
           <div className="grid md:grid-cols-3 gap-8">
             <ScrollReveal animation="fade-up" delay={0}>
-              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-blue-600 hover:shadow-xl transition-shadow">
+              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-blue-400 hover:shadow-xl transition-shadow">
                 <div className="flex justify-center mb-4">
-                  <Wrench className="text-blue-600" size={48} />
+                  <Wrench className="text-blue-400" size={48} />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-gray-900">Quality Products</h3>
                 <p className="text-gray-700">
@@ -120,9 +120,9 @@ export default function Home() {
               </div>
             </ScrollReveal>
             <ScrollReveal animation="fade-up" delay={200}>
-              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-blue-600 hover:shadow-xl transition-shadow">
+              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-blue-400 hover:shadow-xl transition-shadow">
                 <div className="flex justify-center mb-4">
-                  <Package className="text-blue-600" size={48} />
+                  <Package className="text-blue-400" size={48} />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-gray-900">Wide Selection</h3>
                 <p className="text-gray-700">
@@ -131,9 +131,9 @@ export default function Home() {
               </div>
             </ScrollReveal>
             <ScrollReveal animation="fade-up" delay={400}>
-              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-blue-600 hover:shadow-xl transition-shadow">
+              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-blue-400 hover:shadow-xl transition-shadow">
                 <div className="flex justify-center mb-4">
-                  <Truck className="text-blue-600" size={48} />
+                  <Truck className="text-blue-400" size={48} />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-gray-900">Fast Delivery</h3>
                 <p className="text-gray-700">
