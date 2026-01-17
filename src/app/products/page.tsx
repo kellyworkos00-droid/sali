@@ -1,6 +1,7 @@
 import { getProducts } from "@/lib/products";
 import ProductCard from "@/components/ProductCard";
 import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Products - Sali Products Kenya",
