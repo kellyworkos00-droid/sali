@@ -8,14 +8,15 @@ export const metadata: Metadata = {
   description: "Browse our extensive catalog of tools, machines, and industrial supplies.",
 };
 
-export default function ProductsPage({
+export default async function ProductsPage({
   searchParams,
 }: {
-  searchParams: { category?: string };
+  searchParams: Promise<{ category?: string }>;
 }) {
+  const { category } = await searchParams;
   const allProducts = getProducts();
-  const products = searchParams.category
-    ? allProducts.filter((p) => p.category === searchParams.category)
+  const products = category
+    ? allProducts.filter((p) => p.category === category)
     : allProducts;
 
   return (
@@ -27,7 +28,7 @@ export default function ProductsPage({
         <Link
           href="/products"
           className={`px-6 py-2 rounded-lg transition font-semibold ${
-            !searchParams.category
+            !category
               ? "bg-red-600 text-white shadow-md"
               : "bg-white text-gray-700 hover:bg-red-50 border-2 border-gray-200"
           }`}
@@ -37,7 +38,7 @@ export default function ProductsPage({
         <Link
           href="/products?category=tools"
           className={`px-6 py-2 rounded-lg transition font-semibold ${
-            searchParams.category === "tools"
+            category === "tools"
               ? "bg-red-600 text-white shadow-md"
               : "bg-white text-gray-700 hover:bg-red-50 border-2 border-gray-200"
           }`}
@@ -47,7 +48,7 @@ export default function ProductsPage({
         <Link
           href="/products?category=machines"
           className={`px-6 py-2 rounded-lg transition font-semibold ${
-            searchParams.category === "machines"
+            category === "machines"
               ? "bg-red-600 text-white shadow-md"
               : "bg-white text-gray-700 hover:bg-red-50 border-2 border-gray-200"
           }`}
@@ -57,7 +58,7 @@ export default function ProductsPage({
         <Link
           href="/products?category=supplies"
           className={`px-6 py-2 rounded-lg transition font-semibold ${
-            searchParams.category === "supplies"
+            category === "supplies"
               ? "bg-red-600 text-white shadow-md"
               : "bg-white text-gray-700 hover:bg-red-50 border-2 border-gray-200"
           }`}

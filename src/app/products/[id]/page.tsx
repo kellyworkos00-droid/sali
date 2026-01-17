@@ -4,8 +4,9 @@ import Image from "next/image";
 import { formatPrice } from "@/lib/utils";
 import AddToCartButton from "@/components/AddToCartButton";
 
-export default function ProductPage({ params }: { params: { id: string } }) {
-  const product = getProductById(params.id);
+export default async function ProductPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const product = getProductById(id);
 
   if (!product) {
     notFound();
