@@ -42,21 +42,21 @@ export default function AboutPage() {
 
           {/* Stats Grid */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 border-2 border-red-200">
+            <div className="bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border-2 border-red-200 perspective-container transform-3d hover-lift-3d hover:animate-[float3d_3s_ease-in-out_infinite]">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-5xl font-bold text-red-600">10+</h3>
                 <TrendingUp className="text-red-600" size={40} />
               </div>
               <p className="text-gray-700 font-semibold text-lg">Years of Experience</p>
             </div>
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 border-2 border-blue-200">
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border-2 border-blue-200 perspective-container transform-3d hover-tilt-3d hover:animate-[pulse3d_2s_ease-in-out_infinite]">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-5xl font-bold text-blue-600">5000+</h3>
                 <Zap className="text-blue-600" size={40} />
               </div>
               <p className="text-gray-700 font-semibold text-lg">Products Available</p>
             </div>
-            <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105 border-2 border-green-200">
+            <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border-2 border-green-200 perspective-container transform-3d hover-lift-3d hover:animate-[bounce3d_2.5s_ease-in-out_infinite]">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-5xl font-bold text-green-600">1000+</h3>
                 <Users className="text-green-600" size={40} />

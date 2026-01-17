@@ -33,7 +33,7 @@ export default function Home() {
           <div className="max-w-3xl space-y-8">
             {/* Trust Badges */}
             <div className="flex flex-wrap gap-4 animate-[fadeIn_1s_ease-in]">
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 hover:animate-[bounce3d_1s_ease-in-out_infinite] transform-3d hover-lift-3d">
                 <Shield className="text-yellow-400" size={20} />
                 <span className="text-sm font-medium">Trusted Quality</span>
               </div>
@@ -64,7 +64,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 pt-4 animate-[slideUp_1s_ease-out_0.4s_both]">
               <Link
                 href="/products"
-                className="group relative bg-red-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-red-700 transition-all duration-300 flex items-center justify-center gap-3 shadow-2xl hover:shadow-red-500/50 hover:scale-105 overflow-hidden"
+                className="group relative bg-red-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-red-700 transition-all duration-300 flex items-center justify-center gap-3 shadow-2xl hover:shadow-red-500/50 overflow-hidden perspective-container transform-3d hover-lift-3d"
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-red-500 to-red-700 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                 <span className="relative">Shop Now</span>
@@ -143,27 +143,27 @@ export default function Home() {
           <div className="flex justify-center gap-8 flex-wrap">
             <Link
               href="/products?category=tools"
-              className="group flex flex-col items-center"
+              className="group flex flex-col items-center perspective-container"
             >
-              <div className="w-24 h-24 bg-gradient-to-br from-red-500 to-red-700 rounded-2xl flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all hover:scale-110 mb-3">
+              <div className="w-24 h-24 bg-gradient-to-br from-red-500 to-red-700 rounded-2xl flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all hover:scale-110 mb-3 transform-3d hover:animate-[tilt3d_2s_ease-in-out_infinite]">
                 <Wrench size={40} />
               </div>
               <span className="text-sm font-semibold text-gray-700 group-hover:text-red-600 transition">Hand Tools</span>
             </Link>
             <Link
               href="/products?category=machines"
-              className="group flex flex-col items-center"
+              className="group flex flex-col items-center perspective-container"
             >
-              <div className="w-24 h-24 bg-gradient-to-br from-red-600 to-red-800 rounded-2xl flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all hover:scale-110 mb-3">
+              <div className="w-24 h-24 bg-gradient-to-br from-red-600 to-red-800 rounded-2xl flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all hover:scale-110 mb-3 transform-3d hover:animate-[pulse3d_1.5s_ease-in-out_infinite]">
                 <Package size={40} />
               </div>
               <span className="text-sm font-semibold text-gray-700 group-hover:text-red-600 transition">Machines</span>
             </Link>
             <Link
               href="/products?category=supplies"
-              className="group flex flex-col items-center"
+              className="group flex flex-col items-center perspective-container"
             >
-              <div className="w-24 h-24 bg-white border-4 border-red-600 rounded-2xl flex items-center justify-center text-red-700 shadow-lg hover:shadow-xl transition-all hover:scale-110 hover:bg-red-50 mb-3">
+              <div className="w-24 h-24 bg-white border-4 border-red-600 rounded-2xl flex items-center justify-center text-red-700 shadow-lg hover:shadow-xl transition-all hover:scale-110 hover:bg-red-50 mb-3 transform-3d hover:animate-[bounce3d_1s_ease-in-out_infinite]">
                 <Truck size={40} />
               </div>
               <span className="text-sm font-semibold text-gray-700 group-hover:text-red-600 transition">Supplies</span>
