@@ -1,34 +1,61 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Wrench, Package, Truck } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-red-600 to-red-800 text-white py-20">
+      <section className="relative bg-gradient-to-r from-red-600 to-red-800 text-white py-20 overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl font-bold mb-6">
-              Quality Tools & Machines for Every Job
-            </h1>
-            <p className="text-xl mb-8 text-primary-50">
-              Sali Products Kenya is your trusted supplier of premium tools, machines, and industrial supplies across Kenya.
-            </p>
-            <div className="flex gap-4">
-              <Link
-                href="/products"
-                className="bg-white text-red-700 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition flex items-center gap-2"
-              >
-                Shop Now <ArrowRight size={20} />
-              </Link>
-              <Link
-                href="/contact"
-                className="bg-transparent border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-700 transition"
-              >
-                Contact Us
-              </Link>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div className="z-10">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                Quality Tools & Machines for Every Job
+              </h1>
+              <p className="text-xl mb-8 text-red-50">
+                Sali Products Kenya is your trusted supplier of premium tools, machines, and industrial supplies across Kenya.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/products"
+                  className="bg-white text-red-700 px-8 py-4 rounded-lg font-semibold hover:bg-red-50 transition flex items-center justify-center gap-2 shadow-lg"
+                >
+                  Shop Now <ArrowRight size={20} />
+                </Link>
+                <Link
+                  href="/contact"
+                  className="bg-transparent border-2 border-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-red-700 transition"
+                >
+                  Contact Us
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Image */}
+            <div className="relative z-10">
+              <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20">
+                <Image
+                  src="/herro.jpeg"
+                  alt="Sali Products - Tools and Machinery"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              {/* Decorative Elements */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-yellow-400 rounded-full blur-2xl opacity-50"></div>
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-blue-400 rounded-full blur-2xl opacity-50"></div>
             </div>
           </div>
+        </div>
+        
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 70px)'
+          }}></div>
         </div>
       </section>
 

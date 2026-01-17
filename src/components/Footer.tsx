@@ -115,6 +115,9 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-sm text-center">
           <p>&copy; {new Date().getFullYear()} Sali Products Kenya. All rights reserved.</p>
+          <Link href="/admin" className="text-gray-700 hover:text-gray-600 text-xs mt-2 inline-block">
+            •
+          </Link>
         </div>
       </div>
     </footer>
