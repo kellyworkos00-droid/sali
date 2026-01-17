@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useCartStore } from "@/store/cartStore";
 import { formatPrice } from "@/lib/utils";
 import Image from "next/image";
@@ -13,6 +13,7 @@ export default function CheckoutPage() {
   const router = useRouter();
   const { items, getTotalPrice, clearCart } = useCartStore();
   const [isProcessing, setIsProcessing] = useState(false);
+  const [location, setLocation] = useState<{ latitude: number; longitude: number } | null>(null);
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -24,7 +25,25 @@ export default function CheckoutPage() {
     county: "",
     postalCode: "",
     paymentMethod: "mpesa",
+    mpesaPhone: "",
   });
+
+  // Get user's location
+  useEffect(() => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          setLocation({
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude,
+          });
+        },
+        (error) => {
+          console.log("Location access denied:", error);
+        }
+      );
+    }
+  }, []);
 
   const subtotal = getTotalPrice();
   const shipping = subtotal > 0 ? 500 : 0; // KES 500 flat shipping
@@ -54,20 +73,67 @@ export default function CheckoutPage() {
     e.preventDefault();
     setIsProcessing(true);
 
-    // Simulate order processing
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    try {
+      // Prepare order data for bylon admin
+      const orderData = {
+        customer: {
+          id: `CUST-${Date.now()}`,
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          createdAt: new Date().toISOString(),
+        },
+        items: items.map((item) => ({
+          productId: item.id,
+          productName: item.name,
+          quantity: item.quantity,
+          price: item.price,
+          total: item.price * item.quantity,
+        })),
+        shippingAddress: {
+          street: formData.address,
+          city: formData.city,
+          county: formData.county,
+          postalCode: formData.postalCode,
+          country: "Kenya",
+          latitude: location?.latitude,
+          longitude: location?.longitude,
+        },
+        payment: {
+          method: formData.paymentMethod,
+          status: "pending" as const,
+          amount: total,
+          mpesaPhone: formData.mpesaPhone || formData.phone,
+        },
+        subtotal,
+        tax: 0,
+        shipping,
+        total,
+      };
 
-    // In a real app, you would send this to your backend API
-    console.log("Order Data:", {
-      customer: formData,
-      items,
-      total,
-    });
+      // Send order to API (which bylon can access)
+      const response = await fetch("/api/orders", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(orderData),
+      });
 
-    toast.success("Order placed successfully!");
-    clearCart();
-    setIsProcessing(false);
-    router.push("/order-confirmation");
+      const result = await response.json();
+
+      if (result.success) {
+        toast.success("Order placed successfully!");
+        clearCart();
+        router.push(`/order-confirmation?orderId=${result.data.orderNumber}`);
+      } else {
+        toast.error("Failed to place order. Please try again.");
+      }
+    } catch (error) {
+      console.error("Order error:", error);
+      toast.error("An error occurred. Please try again.");
+    } finally {
+      setIsProcessing(false);
+    }
   };
 
   return (
@@ -219,7 +285,7 @@ export default function CheckoutPage() {
                 Payment Method
               </h2>
               <div className="space-y-3">
-                <label className="flex items-center gap-3 p-4 border-2 rounded-lg cursor-pointer hover:bg-red-50 transition">
+                <label className="flex items-center gap-3 p-4 border-2 rounded-lg cursor-pointer hover:bg-brand-50 transition">
                   <input
                     type="radio"
                     name="payment"
@@ -228,16 +294,35 @@ export default function CheckoutPage() {
                     onChange={(e) =>
                       setFormData({ ...formData, paymentMethod: e.target.value })
                     }
-                    className="w-4 h-4 text-brand-200"
+                    className="w-4 h-4 text-brand-500"
                   />
-                  <div>
+                  <div className="flex-1">
                     <div className="font-semibold">M-Pesa</div>
                     <div className="text-sm text-gray-600">
                       Pay securely with M-Pesa mobile money
                     </div>
                   </div>
                 </label>
-                <label className="flex items-center gap-3 p-4 border-2 rounded-lg cursor-pointer hover:bg-red-50 transition">
+                
+                {formData.paymentMethod === "mpesa" && (
+                  <div className="ml-7 p-4 bg-gray-50 rounded-lg">
+                    <label className="block text-sm font-semibold mb-2">
+                      M-Pesa Phone Number <span className="text-brand-500">*</span>
+                    </label>
+                    <input
+                      type="tel"
+                      required
+                      placeholder="+254 700 000 000"
+                      value={formData.mpesaPhone}
+                      onChange={(e) =>
+                        setFormData({ ...formData, mpesaPhone: e.target.value })
+                      }
+                      className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-500"
+                    />
+                  </div>
+                )}
+
+                <label className="flex items-center gap-3 p-4 border-2 rounded-lg cursor-pointer hover:bg-brand-50 transition">
                   <input
                     type="radio"
                     name="payment"
@@ -246,7 +331,7 @@ export default function CheckoutPage() {
                     onChange={(e) =>
                       setFormData({ ...formData, paymentMethod: e.target.value })
                     }
-                    className="w-4 h-4 text-brand-200"
+                    className="w-4 h-4 text-brand-500"
                   />
                   <div>
                     <div className="font-semibold">Credit/Debit Card</div>
@@ -255,7 +340,7 @@ export default function CheckoutPage() {
                     </div>
                   </div>
                 </label>
-                <label className="flex items-center gap-3 p-4 border-2 rounded-lg cursor-pointer hover:bg-red-50 transition">
+                <label className="flex items-center gap-3 p-4 border-2 rounded-lg cursor-pointer hover:bg-brand-50 transition">
                   <input
                     type="radio"
                     name="payment"
@@ -264,7 +349,7 @@ export default function CheckoutPage() {
                     onChange={(e) =>
                       setFormData({ ...formData, paymentMethod: e.target.value })
                     }
-                    className="w-4 h-4 text-brand-200"
+                    className="w-4 h-4 text-brand-500"
                   />
                   <div>
                     <div className="font-semibold">Cash on Delivery</div>
@@ -274,6 +359,18 @@ export default function CheckoutPage() {
                   </div>
                 </label>
               </div>
+              
+              {location && (
+                <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded-lg text-sm">
+                  <div className="flex items-center gap-2 text-green-700">
+                    <MapPin size={16} />
+                    <span className="font-semibold">Location Captured</span>
+                  </div>
+                  <p className="text-gray-600 text-xs mt-1">
+                    Your delivery location has been recorded for accurate shipping
+                  </p>
+                </div>
+              )}
             </div>
           </div>
 
