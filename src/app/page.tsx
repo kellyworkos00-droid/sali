@@ -140,35 +140,33 @@ export default function Home() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Shop by Category</h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="flex justify-center gap-8 flex-wrap">
             <Link
               href="/products?category=tools"
-              className="group relative h-64 bg-gradient-to-br from-red-500 to-red-700 rounded-lg overflow-hidden hover:shadow-xl transition"
+              className="group flex flex-col items-center"
             >
-              <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition"></div>
-              <div className="relative h-full flex flex-col items-center justify-center text-white">
-                <Wrench size={64} className="mb-4" />
-                <h3 className="text-2xl font-bold">Hand Tools</h3>
+              <div className="w-24 h-24 bg-gradient-to-br from-red-500 to-red-700 rounded-2xl flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all hover:scale-110 mb-3">
+                <Wrench size={40} />
               </div>
+              <span className="text-sm font-semibold text-gray-700 group-hover:text-red-600 transition">Hand Tools</span>
             </Link>
             <Link
               href="/products?category=machines"
-              className="group relative h-64 bg-gradient-to-br from-red-600 to-red-800 rounded-lg overflow-hidden hover:shadow-xl transition"
+              className="group flex flex-col items-center"
             >
-              <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition"></div>
-              <div className="relative h-full flex flex-col items-center justify-center text-white">
-                <Package size={64} className="mb-4" />
-                <h3 className="text-2xl font-bold">Machines</h3>
+              <div className="w-24 h-24 bg-gradient-to-br from-red-600 to-red-800 rounded-2xl flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all hover:scale-110 mb-3">
+                <Package size={40} />
               </div>
+              <span className="text-sm font-semibold text-gray-700 group-hover:text-red-600 transition">Machines</span>
             </Link>
             <Link
               href="/products?category=supplies"
-              className="group relative h-64 bg-white border-4 border-red-600 rounded-lg overflow-hidden hover:shadow-xl transition hover:bg-red-50"
+              className="group flex flex-col items-center"
             >
-              <div className="relative h-full flex flex-col items-center justify-center text-red-700">
-                <Truck size={64} className="mb-4" />
-                <h3 className="text-2xl font-bold">Supplies</h3>
+              <div className="w-24 h-24 bg-white border-4 border-red-600 rounded-2xl flex items-center justify-center text-red-700 shadow-lg hover:shadow-xl transition-all hover:scale-110 hover:bg-red-50 mb-3">
+                <Truck size={40} />
               </div>
+              <span className="text-sm font-semibold text-gray-700 group-hover:text-red-600 transition">Supplies</span>
             </Link>
           </div>
         </div>
