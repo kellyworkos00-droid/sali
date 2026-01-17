@@ -67,6 +67,27 @@ export const products: Product[] = [
     category: 'machines',
     image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=500',
     stock: 10,
+    featured: true,
+  },
+  {
+    id: '7',
+    name: 'Angle Grinder',
+    description: 'Heavy-duty 2000W angle grinder for cutting and grinding metal and stone.',
+    price: 8500,
+    category: 'machines',
+    image: 'https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=500',
+    stock: 30,
+    featured: true,
+  },
+  {
+    id: '8',
+    name: 'Measuring Tape Set',
+    description: '5-piece professional measuring tape set with steel blades up to 10m.',
+    price: 1800,
+    category: 'tools',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500',
+    stock: 80,
+    featured: true,
   },
 ];
 

@@ -2,8 +2,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Wrench, Package, Truck, Shield, Award, Star } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import ProductCard from "@/components/ProductCard";
+import { getProducts } from "@/lib/products";
 
 export default function Home() {
+  const products = getProducts();
+  const topSellingProducts = products.filter(p => p.featured).slice(0, 6);
+  const topFinds = products.slice(0, 8);
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -157,31 +162,76 @@ export default function Home() {
               href="/products?category=tools"
               className="group flex flex-col items-center perspective-container"
             >
-              <div className="w-24 h-24 bg-gradient-to-br from-red-500 to-red-700 rounded-2xl flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all hover:scale-110 mb-3 transform-3d hover:animate-[tilt3d_2s_ease-in-out_infinite]">
-                <Wrench size={40} />
+              <div className="w-24 h-24 bg-gradient-to-br from-blue-300 to-blue-500 rounded-2xl flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all hover:scale-110 mb-3 transform-3d hover:animate-[tilt3d_2s_ease-in-out_infinite]">
+                <Wrench size={42} className="animate-[float3d_3s_ease-in-out_infinite]" />
               </div>
-              <span className="text-sm font-semibold text-gray-700 group-hover:text-red-600 transition">Hand Tools</span>
+              <span className="text-sm font-semibold text-gray-700 group-hover:text-blue-400 transition">Hand Tools</span>
             </Link>
             <Link
               href="/products?category=machines"
               className="group flex flex-col items-center perspective-container"
             >
-              <div className="w-24 h-24 bg-gradient-to-br from-red-600 to-red-800 rounded-2xl flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all hover:scale-110 mb-3 transform-3d hover:animate-[pulse3d_1.5s_ease-in-out_infinite]">
-                <Package size={40} />
+              <div className="w-24 h-24 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all hover:scale-110 mb-3 transform-3d hover:animate-[pulse3d_1.5s_ease-in-out_infinite]">
+                <Package size={42} className="animate-[rotate3d_4s_linear_infinite]" />
               </div>
-              <span className="text-sm font-semibold text-gray-700 group-hover:text-red-600 transition">Machines</span>
+              <span className="text-sm font-semibold text-gray-700 group-hover:text-blue-400 transition">Machines</span>
             </Link>
             <Link
               href="/products?category=supplies"
               className="group flex flex-col items-center perspective-container"
             >
-              <div className="w-24 h-24 bg-white border-4 border-red-600 rounded-2xl flex items-center justify-center text-red-700 shadow-lg hover:shadow-xl transition-all hover:scale-110 hover:bg-red-50 mb-3 transform-3d hover:animate-[bounce3d_1s_ease-in-out_infinite]">
-                <Truck size={40} />
+              <div className="w-24 h-24 bg-white border-4 border-blue-400 rounded-2xl flex items-center justify-center text-blue-500 shadow-lg hover:shadow-xl transition-all hover:scale-110 hover:bg-blue-50 mb-3 transform-3d hover:animate-[bounce3d_1s_ease-in-out_infinite]">
+                <Truck size={42} className="animate-[pulse3d_2s_ease-in-out_infinite]" />
               </div>
-              <span className="text-sm font-semibold text-gray-700 group-hover:text-red-600 transition">Supplies</span>
+              <span className="text-sm font-semibold text-gray-700 group-hover:text-blue-400 transition">Supplies</span>
             </Link>
             </div>
           </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Top Selling Products */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <ScrollReveal animation="fade-up">
+            <div className="flex items-center justify-between mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Top Selling Products</h2>
+              <Link href="/products" className="text-blue-400 hover:text-blue-500 font-semibold flex items-center gap-1">
+                View All <ArrowRight size={18} />
+              </Link>
+            </div>
+          </ScrollReveal>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3 md:gap-6">
+            {topSellingProducts.map((product, index) => (
+              <ScrollReveal key={product.id} animation="fade-up" delay={index * 100}>
+                <ProductCard product={product} />
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Your Top Finds */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <ScrollReveal animation="fade-up">
+            <div className="flex items-center justify-between mb-8">
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Your Top Finds</h2>
+                <p className="text-gray-600">Handpicked products just for you</p>
+              </div>
+              <Link href="/products" className="text-blue-400 hover:text-blue-500 font-semibold flex items-center gap-1">
+                See More <ArrowRight size={18} />
+              </Link>
+            </div>
+          </ScrollReveal>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-6">
+            {topFinds.map((product, index) => (
+              <ScrollReveal key={product.id} animation="scale" delay={index * 80}>
+                <ProductCard product={product} />
+              </ScrollReveal>
+            ))}
+          </div>
         </div>
       </section>
     </div>

@@ -11,8 +11,8 @@ interface ProductCardProps {
 export default function ProductCard({ product }: ProductCardProps) {
   return (
     <Link href={`/products/${product.id}`} className="group block perspective-container">
-      <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-100 transform-3d hover-tilt-3d">
-        <div className="relative h-56 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden">
+      <div className="bg-white rounded-lg md:rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-100 transform-3d hover-tilt-3d">
+        <div className="relative h-32 sm:h-40 md:h-56 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden">
           <Image
             src={product.image}
             alt={product.name}
@@ -41,18 +41,18 @@ export default function ProductCard({ product }: ProductCardProps) {
             )}
           </div>
         </div>
-        <div className="p-5">
-          <h3 className="font-bold text-lg mb-2 line-clamp-2 text-gray-900 group-hover:text-blue-400 transition-colors">
+        <div className="p-2 sm:p-3 md:p-5">
+          <h3 className="font-bold text-xs sm:text-sm md:text-lg mb-1 md:mb-2 line-clamp-2 text-gray-900 group-hover:text-blue-400 transition-colors">
             {product.name}
           </h3>
-          <p className="text-gray-600 text-sm mb-4 line-clamp-2 leading-relaxed">
+          <p className="text-gray-600 text-[10px] sm:text-xs md:text-sm mb-2 md:mb-4 line-clamp-1 md:line-clamp-2 leading-relaxed hidden sm:block">
             {product.description}
           </p>
-          <div className="flex items-center justify-between pt-3 border-t border-gray-100">
-            <span className="text-blue-400 font-bold text-2xl">
+          <div className="flex items-center justify-between pt-2 md:pt-3 border-t border-gray-100">
+            <span className="text-blue-400 font-bold text-sm sm:text-lg md:text-2xl">
               {formatPrice(product.price)}
             </span>
-            <span className="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
+            <span className="text-[9px] sm:text-xs text-gray-500 bg-gray-100 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full">
               {product.category}
             </span>
           </div>
