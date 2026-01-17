@@ -2,7 +2,7 @@ import { getProducts } from "@/lib/products";
 import ProductCard from "@/components/ProductCard";
 import { Metadata } from "next";
 import Link from "next/link";
-import { Package } from "lucide-react";
+import { Package, Wrench, Cog, Box } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Products - Sali Products Kenya",
@@ -42,43 +42,47 @@ export default async function ProductsPage({
           <div className="flex flex-wrap gap-3">
             <Link
               href="/products"
-              className={`px-6 py-3 rounded-xl transition-all font-semibold ${
+              className={`px-6 py-3 rounded-xl transition-all font-semibold flex items-center gap-2 ${
                 !category
                   ? "bg-gradient-to-r from-red-600 to-red-700 text-white shadow-lg shadow-red-500/30 scale-105"
                   : "bg-gray-100 text-gray-700 hover:bg-red-50 hover:text-red-600 border-2 border-gray-200"
               }`}
             >
+              <Package size={18} />
               All Products
             </Link>
             <Link
               href="/products?category=tools"
-              className={`px-6 py-3 rounded-xl transition-all font-semibold ${
+              className={`px-6 py-3 rounded-xl transition-all font-semibold flex items-center gap-2 ${
                 category === "tools"
                   ? "bg-gradient-to-r from-red-600 to-red-700 text-white shadow-lg shadow-red-500/30 scale-105"
                   : "bg-gray-100 text-gray-700 hover:bg-red-50 hover:text-red-600 border-2 border-gray-200"
               }`}
             >
-              🔧 Tools
+              <Wrench size={18} />
+              Tools
             </Link>
             <Link
               href="/products?category=machines"
-              className={`px-6 py-3 rounded-xl transition-all font-semibold ${
+              className={`px-6 py-3 rounded-xl transition-all font-semibold flex items-center gap-2 ${
                 category === "machines"
                   ? "bg-gradient-to-r from-red-600 to-red-700 text-white shadow-lg shadow-red-500/30 scale-105"
                   : "bg-gray-100 text-gray-700 hover:bg-red-50 hover:text-red-600 border-2 border-gray-200"
               }`}
             >
-              ⚙️ Machines
+              <Cog size={18} />
+              Machines
             </Link>
             <Link
               href="/products?category=supplies"
-              className={`px-6 py-3 rounded-xl transition-all font-semibold ${
+              className={`px-6 py-3 rounded-xl transition-all font-semibold flex items-center gap-2 ${
                 category === "supplies"
                   ? "bg-gradient-to-r from-red-600 to-red-700 text-white shadow-lg shadow-red-500/30 scale-105"
                   : "bg-gray-100 text-gray-700 hover:bg-red-50 hover:text-red-600 border-2 border-gray-200"
               }`}
             >
-              📦 Supplies
+              <Box size={18} />
+              Supplies
             </Link>
           </div>
         </div>
