@@ -39,27 +39,27 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/products" className="hover:text-red-400 transition">
+                <Link href="/products" className="hover:text-brand-300 transition">
                   Products
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-primary-400 transition">
+                <Link href="/about" className="hover:text-brand-300 transition">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-primary-400 transition">
+                <Link href="/contact" className="hover:text-brand-300 transition">
                   Contact
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="hover:text-primary-400 transition">
+                <Link href="/terms" className="hover:text-brand-300 transition">
                   Terms & Conditions
                 </Link>
               </li>
               <li>
-                <Link href="/privacy" className="hover:text-primary-400 transition">
+                <Link href="/privacy" className="hover:text-brand-300 transition">
                   Privacy Policy
                 </Link>
               </li>
@@ -71,22 +71,22 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Categories</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/products?category=tools" className="hover:text-primary-400 transition">
+                <Link href="/products?category=tools" className="hover:text-brand-300 transition">
                   Hand Tools
                 </Link>
               </li>
               <li>
-                <Link href="/products?category=power-tools" className="hover:text-primary-400 transition">
+                <Link href="/products?category=power-tools" className="hover:text-brand-300 transition">
                   Power Tools
                 </Link>
               </li>
               <li>
-                <Link href="/products?category=machines" className="hover:text-primary-400 transition">
+                <Link href="/products?category=machines" className="hover:text-brand-300 transition">
                   Machines
                 </Link>
               </li>
               <li>
-                <Link href="/products?category=supplies" className="hover:text-primary-400 transition">
+                <Link href="/products?category=supplies" className="hover:text-brand-300 transition">
                   Industrial Supplies
                 </Link>
               </li>

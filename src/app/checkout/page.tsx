@@ -419,17 +419,37 @@ export default function CheckoutPage() {
               </div>
 
               {/* Submit Button */}
-              <button
-                type="submit"
-                disabled={isProcessing}
-                className="w-full bg-brand-200 text-white px-8 py-4 rounded-lg font-semibold hover:bg-brand-200 transition mt-6 disabled:bg-gray-400 disabled:cursor-not-allowed"
-              >
-                {isProcessing ? "Processing..." : "Place Order"}
-              </button>
+              <div className="space-y-4">
+                <label className="flex items-start gap-3 text-sm">
+                  <input
+                    type="checkbox"
+                    required
+                    className="mt-1 w-4 h-4 text-brand-500 rounded"
+                  />
+                  <span className="text-gray-700">
+                    I agree to the{" "}
+                    <Link href="/terms" target="_blank" className="text-brand-500 hover:text-brand-600 font-semibold underline">
+                      Terms & Conditions
+                    </Link>{" "}
+                    and{" "}
+                    <Link href="/privacy" target="_blank" className="text-brand-500 hover:text-brand-600 font-semibold underline">
+                      Privacy Policy
+                    </Link>
+                  </span>
+                </label>
+
+                <button
+                  type="submit"
+                  disabled={isProcessing}
+                  className="w-full bg-gradient-to-r from-brand-500 to-brand-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-brand-600 hover:to-brand-700 transition shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isProcessing ? "Processing..." : "Place Order"}
+                </button>
+              </div>
 
               <Link
                 href="/cart"
-                className="block w-full text-center mt-4 text-brand-200 hover:text-brand-200 transition"
+                className="block w-full text-center mt-4 text-brand-500 hover:text-brand-600 transition font-semibold"
               >
                 ← Back to Cart
               </Link>
