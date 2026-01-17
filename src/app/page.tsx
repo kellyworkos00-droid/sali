@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Wrench, Package, Truck, Shield, Award, Star } from "lucide-react";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Home() {
   return (
@@ -103,35 +104,43 @@ export default function Home() {
       {/* Features Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Why Choose Us</h2>
+          <ScrollReveal animation="blur">
+            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Why Choose Us</h2>
+          </ScrollReveal>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-red-600">
-              <div className="flex justify-center mb-4">
-                <Wrench className="text-red-600" size={48} />
+            <ScrollReveal animation="fade-up" delay={0}>
+              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-red-600 hover:shadow-xl transition-shadow">
+                <div className="flex justify-center mb-4">
+                  <Wrench className="text-red-600" size={48} />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-gray-900">Quality Products</h3>
+                <p className="text-gray-700">
+                  We source only the best tools and machines from trusted manufacturers worldwide.
+                </p>
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">Quality Products</h3>
-              <p className="text-gray-700">
-                We source only the best tools and machines from trusted manufacturers worldwide.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-red-600">
-              <div className="flex justify-center mb-4">
-                <Package className="text-red-600" size={48} />
+            </ScrollReveal>
+            <ScrollReveal animation="fade-up" delay={200}>
+              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-red-600 hover:shadow-xl transition-shadow">
+                <div className="flex justify-center mb-4">
+                  <Package className="text-red-600" size={48} />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-gray-900">Wide Selection</h3>
+                <p className="text-gray-700">
+                  Browse thousands of products across multiple categories for all your needs.
+                </p>
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">Wide Selection</h3>
-              <p className="text-gray-700">
-                Browse thousands of products across multiple categories for all your needs.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-red-600">
-              <div className="flex justify-center mb-4">
-                <Truck className="text-red-600" size={48} />
+            </ScrollReveal>
+            <ScrollReveal animation="fade-up" delay={400}>
+              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-red-600 hover:shadow-xl transition-shadow">
+                <div className="flex justify-center mb-4">
+                  <Truck className="text-red-600" size={48} />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-gray-900">Fast Delivery</h3>
+                <p className="text-gray-700">
+                  Quick and reliable delivery service across Kenya to get your orders to you fast.
+                </p>
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">Fast Delivery</h3>
-              <p className="text-gray-700">
-                Quick and reliable delivery service across Kenya to get your orders to you fast.
-              </p>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -139,8 +148,11 @@ export default function Home() {
       {/* Categories Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Shop by Category</h2>
-          <div className="flex justify-center gap-8 flex-wrap">
+          <ScrollReveal animation="scale">
+            <h2 className="text-3xl font-bold text-center mb-12">Shop by Category</h2>
+          </ScrollReveal>
+          <ScrollReveal animation="blur" delay={200}>
+            <div className="flex justify-center gap-8 flex-wrap">
             <Link
               href="/products?category=tools"
               className="group flex flex-col items-center perspective-container"
@@ -168,7 +180,8 @@ export default function Home() {
               </div>
               <span className="text-sm font-semibold text-gray-700 group-hover:text-red-600 transition">Supplies</span>
             </Link>
-          </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
     </div>
