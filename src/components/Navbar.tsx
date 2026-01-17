@@ -53,7 +53,7 @@ export default function Navbar() {
             </Link>
             <Link href="/cart" className="relative text-gray-700 hover:text-blue-400 transition">
               <ShoppingCart size={20} />
-              {itemCount > 0 && (
+              {cartItemsCount > 0 && (
                 <span className="absolute -top-2 -right-2 bg-blue-400 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                   {cartItemsCount}
                 </span>
