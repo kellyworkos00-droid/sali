@@ -186,57 +186,6 @@ export default function ContactPage() {
               </p>
             </div>
           </div>
-        <div>
-          <div className="bg-white rounded-lg shadow-md p-8 mb-6">
-            <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <MapPin className="text-red-600 flex-shrink-0" size={24} />
-                <div>
-                  <h3 className="font-semibold mb-1">Address</h3>
-                  <p className="text-gray-600">
-                    Nairobi, Kenya<br />
-                    Industrial Area
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <Phone className="text-red-600 flex-shrink-0" size={24} />
-                <div>
-                  <h3 className="font-semibold mb-1">Phone</h3>
-                  <p className="text-gray-600">+254 700 000 000</p>
-                  <p className="text-gray-600">+254 711 000 000</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <Mail className="text-red-600 flex-shrink-0" size={24} />
-                <div>
-                  <h3 className="font-semibold mb-1">Email</h3>
-                  <p className="text-gray-600">info@saliproducts.co.ke</p>
-                  <p className="text-gray-600">sales@saliproducts.co.ke</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-red-50 rounded-lg p-8 border-l-4 border-red-600">
-            <h3 className="text-xl font-bold mb-4">Business Hours</h3>
-            <div className="space-y-2 text-gray-700">
-              <div className="flex justify-between">
-                <span>Monday - Friday:</span>
-                <span className="font-semibold">8:00 AM - 6:00 PM</span>
-              <p className="flex justify-between">
-                <span className="font-semibold">Saturday:</span>
-                <span>9:00 AM - 5:00 PM</span>
-              </p>
-              <p className="flex justify-between">
-                <span className="font-semibold">Sunday:</span>
-                <span className="text-red-600">Closed</span>
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </div>
