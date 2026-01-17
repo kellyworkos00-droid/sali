@@ -17,7 +17,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <SaliLogo width={140} height={56} />
+            <SaliLogo width={180} height={90} />
           </Link>
 
           {/* Desktop Navigation */}

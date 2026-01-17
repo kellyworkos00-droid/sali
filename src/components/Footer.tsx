@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="mb-4">
-              <SaliLogo width={160} height={64} />
+              <SaliLogo width={200} height={100} />
             </div>
             <p className="text-sm mb-4">
               Your trusted partner for quality tools, machines, and industrial supplies in Kenya.
