@@ -45,8 +45,8 @@ export default function Navbar() {
 
           {/* Right Side Icons */}
           <div className="flex items-center space-x-4">
-            <Link href="/search" className="text-gray-700 hover:text-blue-400 transition">
-              <Search size={20} />
+            <Link href="/search" className="text-blue-400 hover:text-blue-500 transition hover:scale-110">
+              <Search size={22} />
             </Link>
             <Link href="/account" className="text-gray-700 hover:text-blue-400 transition">
               <User size={20} />
@@ -54,7 +54,7 @@ export default function Navbar() {
             <Link href="/cart" className="relative text-gray-700 hover:text-blue-400 transition">
               <ShoppingCart size={20} />
               {cartItemsCount > 0 && (
-                <span className="absolute -top-2 -right-2 bg-blue-400 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                <span className="absolute -top-2 -right-2 bg-blue-400 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold shadow-lg">
                   {cartItemsCount}
                 </span>
               )}
