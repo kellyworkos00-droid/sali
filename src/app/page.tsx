@@ -70,9 +70,9 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 pt-4 animate-[slideUp_1s_ease-out_0.4s_both]">
               <Link
                 href="/products"
-                className="group relative bg-blue-200 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-blue-200 transition-all duration-300 flex items-center justify-center gap-3 shadow-2xl hover:shadow-blue-200/50 overflow-hidden perspective-container transform-3d hover-lift-3d"
+                className="group relative bg-brand-200 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-brand-200 transition-all duration-300 flex items-center justify-center gap-3 shadow-2xl hover:shadow-brand-200/50 overflow-hidden perspective-container transform-3d hover-lift-3d"
               >
-                <span className="absolute inset-0 bg-gradient-to-r from-blue-200 to-blue-200 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                <span className="absolute inset-0 bg-gradient-to-r from-brand-200 to-brand-200 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                 <span className="relative">Shop Now</span>
                 <ArrowRight className="relative group-hover:translate-x-1 transition-transform" size={24} />
               </Link>
@@ -114,9 +114,9 @@ export default function Home() {
           </ScrollReveal>
           <div className="grid md:grid-cols-3 gap-8">
             <ScrollReveal animation="fade-up" delay={0}>
-              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-blue-200 hover:shadow-xl transition-shadow">
+              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-brand-200 hover:shadow-xl transition-shadow">
                 <div className="flex justify-center mb-4">
-                  <Wrench className="text-blue-200" size={48} />
+                  <Wrench className="text-brand-200" size={48} />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-gray-900">Quality Products</h3>
                 <p className="text-gray-700">
@@ -125,9 +125,9 @@ export default function Home() {
               </div>
             </ScrollReveal>
             <ScrollReveal animation="fade-up" delay={200}>
-              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-blue-200 hover:shadow-xl transition-shadow">
+              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-brand-200 hover:shadow-xl transition-shadow">
                 <div className="flex justify-center mb-4">
-                  <Package className="text-blue-200" size={48} />
+                  <Package className="text-brand-200" size={48} />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-gray-900">Wide Selection</h3>
                 <p className="text-gray-700">
@@ -136,9 +136,9 @@ export default function Home() {
               </div>
             </ScrollReveal>
             <ScrollReveal animation="fade-up" delay={400}>
-              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-blue-200 hover:shadow-xl transition-shadow">
+              <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-brand-200 hover:shadow-xl transition-shadow">
                 <div className="flex justify-center mb-4">
-                  <Truck className="text-blue-200" size={48} />
+                  <Truck className="text-brand-200" size={48} />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-gray-900">Fast Delivery</h3>
                 <p className="text-gray-700">
@@ -162,28 +162,28 @@ export default function Home() {
               href="/products?category=tools"
               className="group flex flex-col items-center perspective-container"
             >
-              <div className="w-24 h-24 bg-gradient-to-br from-blue-200 to-blue-300 rounded-2xl flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all hover:scale-110 mb-3 transform-3d hover:animate-[tilt3d_2s_ease-in-out_infinite]">
+              <div className="w-24 h-24 bg-gradient-to-br from-brand-200 to-brand-300 rounded-2xl flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all hover:scale-110 mb-3 transform-3d hover:animate-[tilt3d_2s_ease-in-out_infinite]">
                 <Wrench size={42} className="animate-[float3d_3s_ease-in-out_infinite]" />
               </div>
-              <span className="text-sm font-semibold text-gray-700 group-hover:text-blue-200 transition">Hand Tools</span>
+              <span className="text-sm font-semibold text-gray-700 group-hover:text-brand-200 transition">Hand Tools</span>
             </Link>
             <Link
               href="/products?category=machines"
               className="group flex flex-col items-center perspective-container"
             >
-              <div className="w-24 h-24 bg-gradient-to-br from-blue-200 to-blue-300 rounded-2xl flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all hover:scale-110 mb-3 transform-3d hover:animate-[pulse3d_1.5s_ease-in-out_infinite]">
+              <div className="w-24 h-24 bg-gradient-to-br from-brand-200 to-brand-300 rounded-2xl flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all hover:scale-110 mb-3 transform-3d hover:animate-[pulse3d_1.5s_ease-in-out_infinite]">
                 <Package size={42} className="animate-[rotate3d_4s_linear_infinite]" />
               </div>
-              <span className="text-sm font-semibold text-gray-700 group-hover:text-blue-200 transition">Machines</span>
+              <span className="text-sm font-semibold text-gray-700 group-hover:text-brand-200 transition">Machines</span>
             </Link>
             <Link
               href="/products?category=supplies"
               className="group flex flex-col items-center perspective-container"
             >
-              <div className="w-24 h-24 bg-white border-4 border-blue-200 rounded-2xl flex items-center justify-center text-blue-300 shadow-lg hover:shadow-xl transition-all hover:scale-110 hover:bg-blue-50 mb-3 transform-3d hover:animate-[bounce3d_1s_ease-in-out_infinite]">
+              <div className="w-24 h-24 bg-white border-4 border-brand-200 rounded-2xl flex items-center justify-center text-brand-300 shadow-lg hover:shadow-xl transition-all hover:scale-110 hover:bg-blue-50 mb-3 transform-3d hover:animate-[bounce3d_1s_ease-in-out_infinite]">
                 <Truck size={42} className="animate-[pulse3d_2s_ease-in-out_infinite]" />
               </div>
-              <span className="text-sm font-semibold text-gray-700 group-hover:text-blue-200 transition">Supplies</span>
+              <span className="text-sm font-semibold text-gray-700 group-hover:text-brand-200 transition">Supplies</span>
             </Link>
             </div>
           </ScrollReveal>
@@ -196,7 +196,7 @@ export default function Home() {
           <ScrollReveal animation="fade-up">
             <div className="flex items-center justify-between mb-8">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Top Selling Products</h2>
-              <Link href="/products" className="text-blue-200 hover:text-blue-300 font-semibold flex items-center gap-1">
+              <Link href="/products" className="text-brand-200 hover:text-brand-300 font-semibold flex items-center gap-1">
                 View All <ArrowRight size={18} />
               </Link>
             </div>
@@ -220,7 +220,7 @@ export default function Home() {
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Your Top Finds</h2>
                 <p className="text-gray-600">Handpicked products just for you</p>
               </div>
-              <Link href="/products" className="text-blue-200 hover:text-blue-300 font-semibold flex items-center gap-1">
+              <Link href="/products" className="text-brand-200 hover:text-brand-300 font-semibold flex items-center gap-1">
                 See More <ArrowRight size={18} />
               </Link>
             </div>

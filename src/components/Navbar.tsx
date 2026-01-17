@@ -29,32 +29,32 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-blue-200 transition font-medium">
+            <Link href="/" className="text-gray-700 hover:text-brand-200 transition font-medium">
               Home
             </Link>
-            <Link href="/products" className="text-gray-700 hover:text-blue-200 transition font-medium">
+            <Link href="/products" className="text-gray-700 hover:text-brand-200 transition font-medium">
               Products
             </Link>
-            <Link href="/about" className="text-gray-700 hover:text-blue-200 transition font-medium">
+            <Link href="/about" className="text-gray-700 hover:text-brand-200 transition font-medium">
               About
             </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-blue-200 transition font-medium">
+            <Link href="/contact" className="text-gray-700 hover:text-brand-200 transition font-medium">
               Contact
             </Link>
           </div>
 
           {/* Right Side Icons */}
           <div className="flex items-center space-x-4">
-            <Link href="/search" className="text-blue-200 hover:text-blue-300 transition hover:scale-110">
+            <Link href="/search" className="text-brand-200 hover:text-brand-300 transition hover:scale-110">
               <Search size={22} />
             </Link>
-            <Link href="/account" className="text-gray-700 hover:text-blue-200 transition">
+            <Link href="/account" className="text-gray-700 hover:text-brand-200 transition">
               <User size={20} />
             </Link>
-            <Link href="/cart" className="relative text-gray-700 hover:text-blue-200 transition">
+            <Link href="/cart" className="relative text-gray-700 hover:text-brand-200 transition">
               <ShoppingCart size={20} />
               {cartItemsCount > 0 && (
-                <span className="absolute -top-2 -right-2 bg-blue-200 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold shadow-lg">
+                <span className="absolute -top-2 -right-2 bg-brand-200 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold shadow-lg">
                   {cartItemsCount}
                 </span>
               )}
@@ -75,28 +75,28 @@ export default function Navbar() {
           <div className="md:hidden py-4 border-t">
             <Link
               href="/"
-              className="block py-2 text-gray-700 hover:text-blue-200 transition font-medium"
+              className="block py-2 text-gray-700 hover:text-brand-200 transition font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link
               href="/products"
-              className="block py-2 text-gray-700 hover:text-blue-200 transition font-medium"
+              className="block py-2 text-gray-700 hover:text-brand-200 transition font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               Products
             </Link>
             <Link
               href="/about"
-              className="block py-2 text-gray-700 hover:text-blue-200 transition font-medium"
+              className="block py-2 text-gray-700 hover:text-brand-200 transition font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               About Us
             </Link>
             <Link
               href="/contact"
-              className="block py-2 text-gray-700 hover:text-blue-200 transition font-medium"
+              className="block py-2 text-gray-700 hover:text-brand-200 transition font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact

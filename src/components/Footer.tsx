@@ -22,13 +22,13 @@ export default function Footer() {
               Your trusted partner for quality tools, machines, and industrial supplies in Kenya.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-blue-200 transition">
+              <a href="#" className="hover:text-brand-200 transition">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="hover:text-blue-200 transition">
+              <a href="#" className="hover:text-brand-200 transition">
                 <Twitter size={20} />
               </a>
-              <a href="#" className="hover:text-blue-200 transition">
+              <a href="#" className="hover:text-brand-200 transition">
                 <Instagram size={20} />
               </a>
             </div>

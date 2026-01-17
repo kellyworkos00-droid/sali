@@ -37,7 +37,7 @@ export default function CheckoutPage() {
         <p className="text-gray-600 mb-8">Add some products before checking out!</p>
         <Link
           href="/products"
-          className="bg-blue-200 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-200 transition inline-block"
+          className="bg-brand-200 text-white px-8 py-3 rounded-lg font-semibold hover:bg-brand-200 transition inline-block"
         >
           Shop Now
         </Link>
@@ -76,13 +76,13 @@ export default function CheckoutPage() {
             {/* Contact Information */}
             <div className="bg-white rounded-lg shadow-md p-6">
               <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-                <Mail className="text-blue-200" size={24} />
+                <Mail className="text-brand-200" size={24} />
                 Contact Information
               </h2>
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-semibold mb-2">
-                    First Name <span className="text-blue-200">*</span>
+                    First Name <span className="text-brand-200">*</span>
                   </label>
                   <input
                     type="text"
@@ -91,12 +91,12 @@ export default function CheckoutPage() {
                     onChange={(e) =>
                       setFormData({ ...formData, firstName: e.target.value })
                     }
-                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-200"
+                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-200"
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-semibold mb-2">
-                    Last Name <span className="text-blue-200">*</span>
+                    Last Name <span className="text-brand-200">*</span>
                   </label>
                   <input
                     type="text"
@@ -105,12 +105,12 @@ export default function CheckoutPage() {
                     onChange={(e) =>
                       setFormData({ ...formData, lastName: e.target.value })
                     }
-                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-200"
+                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-200"
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-semibold mb-2">
-                    Email <span className="text-blue-200">*</span>
+                    Email <span className="text-brand-200">*</span>
                   </label>
                   <input
                     type="email"
@@ -119,12 +119,12 @@ export default function CheckoutPage() {
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
                     }
-                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-200"
+                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-200"
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-semibold mb-2">
-                    Phone Number <span className="text-blue-200">*</span>
+                    Phone Number <span className="text-brand-200">*</span>
                   </label>
                   <input
                     type="tel"
@@ -134,7 +134,7 @@ export default function CheckoutPage() {
                     onChange={(e) =>
                       setFormData({ ...formData, phone: e.target.value })
                     }
-                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-200"
+                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-200"
                   />
                 </div>
               </div>
@@ -143,13 +143,13 @@ export default function CheckoutPage() {
             {/* Shipping Address */}
             <div className="bg-white rounded-lg shadow-md p-6">
               <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-                <MapPin className="text-blue-200" size={24} />
+                <MapPin className="text-brand-200" size={24} />
                 Shipping Address
               </h2>
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-semibold mb-2">
-                    Street Address <span className="text-blue-200">*</span>
+                    Street Address <span className="text-brand-200">*</span>
                   </label>
                   <input
                     type="text"
@@ -158,13 +158,13 @@ export default function CheckoutPage() {
                     onChange={(e) =>
                       setFormData({ ...formData, address: e.target.value })
                     }
-                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-200"
+                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-200"
                   />
                 </div>
                 <div className="grid md:grid-cols-3 gap-4">
                   <div>
                     <label className="block text-sm font-semibold mb-2">
-                      City <span className="text-blue-200">*</span>
+                      City <span className="text-brand-200">*</span>
                     </label>
                     <input
                       type="text"
@@ -173,12 +173,12 @@ export default function CheckoutPage() {
                       onChange={(e) =>
                         setFormData({ ...formData, city: e.target.value })
                       }
-                      className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-200"
+                      className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-200"
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-semibold mb-2">
-                      County <span className="text-blue-200">*</span>
+                      County <span className="text-brand-200">*</span>
                     </label>
                     <input
                       type="text"
@@ -187,7 +187,7 @@ export default function CheckoutPage() {
                       onChange={(e) =>
                         setFormData({ ...formData, county: e.target.value })
                       }
-                      className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-200"
+                      className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-200"
                     />
                   </div>
                   <div>
@@ -200,7 +200,7 @@ export default function CheckoutPage() {
                       onChange={(e) =>
                         setFormData({ ...formData, postalCode: e.target.value })
                       }
-                      className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-200"
+                      className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-200"
                     />
                   </div>
                 </div>
@@ -210,7 +210,7 @@ export default function CheckoutPage() {
             {/* Payment Method */}
             <div className="bg-white rounded-lg shadow-md p-6">
               <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-                <CreditCard className="text-blue-200" size={24} />
+                <CreditCard className="text-brand-200" size={24} />
                 Payment Method
               </h2>
               <div className="space-y-3">
@@ -223,7 +223,7 @@ export default function CheckoutPage() {
                     onChange={(e) =>
                       setFormData({ ...formData, paymentMethod: e.target.value })
                     }
-                    className="w-4 h-4 text-blue-200"
+                    className="w-4 h-4 text-brand-200"
                   />
                   <div>
                     <div className="font-semibold">M-Pesa</div>
@@ -241,7 +241,7 @@ export default function CheckoutPage() {
                     onChange={(e) =>
                       setFormData({ ...formData, paymentMethod: e.target.value })
                     }
-                    className="w-4 h-4 text-blue-200"
+                    className="w-4 h-4 text-brand-200"
                   />
                   <div>
                     <div className="font-semibold">Credit/Debit Card</div>
@@ -259,7 +259,7 @@ export default function CheckoutPage() {
                     onChange={(e) =>
                       setFormData({ ...formData, paymentMethod: e.target.value })
                     }
-                    className="w-4 h-4 text-blue-200"
+                    className="w-4 h-4 text-brand-200"
                   />
                   <div>
                     <div className="font-semibold">Cash on Delivery</div>
@@ -292,7 +292,7 @@ export default function CheckoutPage() {
                     <div className="flex-grow">
                       <h3 className="font-semibold text-sm">{item.name}</h3>
                       <p className="text-sm text-gray-600">Qty: {item.quantity}</p>
-                      <p className="text-blue-200 font-semibold">
+                      <p className="text-brand-200 font-semibold">
                         {formatPrice(item.price * item.quantity)}
                       </p>
                     </div>
@@ -312,7 +312,7 @@ export default function CheckoutPage() {
                 </div>
                 <div className="flex justify-between text-xl font-bold border-t pt-3">
                   <span>Total</span>
-                  <span className="text-blue-200">{formatPrice(total)}</span>
+                  <span className="text-brand-200">{formatPrice(total)}</span>
                 </div>
               </div>
 
@@ -320,14 +320,14 @@ export default function CheckoutPage() {
               <button
                 type="submit"
                 disabled={isProcessing}
-                className="w-full bg-blue-200 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-200 transition mt-6 disabled:bg-gray-400 disabled:cursor-not-allowed"
+                className="w-full bg-brand-200 text-white px-8 py-4 rounded-lg font-semibold hover:bg-brand-200 transition mt-6 disabled:bg-gray-400 disabled:cursor-not-allowed"
               >
                 {isProcessing ? "Processing..." : "Place Order"}
               </button>
 
               <Link
                 href="/cart"
-                className="block w-full text-center mt-4 text-blue-200 hover:text-blue-200 transition"
+                className="block w-full text-center mt-4 text-brand-200 hover:text-brand-200 transition"
               >
                 ← Back to Cart
               </Link>
