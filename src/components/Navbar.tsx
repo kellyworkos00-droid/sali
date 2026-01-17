@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ShoppingCart, Menu, X, Search, User } from "lucide-react";
 import { useState } from "react";
 import { useCartStore } from "@/store/cartStore";
-import SaliLogo from "./SaliLogo";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,7 +17,14 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <SaliLogo width={180} height={90} />
+            <Image
+              src="/logo.jpeg"
+              alt="Sali Products Kenya"
+              width={180}
+              height={90}
+              className="h-14 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}

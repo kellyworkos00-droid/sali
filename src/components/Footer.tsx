@@ -1,6 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from "lucide-react";
-import SaliLogo from "./SaliLogo";
 
 export default function Footer() {
   return (
@@ -9,8 +9,14 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <div className="mb-4">
-              <SaliLogo width={200} height={100} />
+            <div className="mb-4 bg-white p-3 rounded-lg inline-block">
+              <Image
+                src="/logo.jpeg"
+                alt="Sali Products Kenya"
+                width={160}
+                height={80}
+                className="h-16 w-auto"
+              />
             </div>
             <p className="text-sm mb-4">
               Your trusted partner for quality tools, machines, and industrial supplies in Kenya.
