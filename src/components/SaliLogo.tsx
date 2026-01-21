@@ -78,3 +78,4 @@ export default function SaliLogo({ className = "", width = 200, height = 100 }: 
     </svg>
   );
 }
+ 

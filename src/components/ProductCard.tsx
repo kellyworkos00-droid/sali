@@ -45,20 +45,21 @@ export default function ProductCard({ product }: ProductCardProps) {
               )}
             </div>
           </div>
-        <div className="p-2 sm:p-3 md:p-5">
-          <h3 className="font-bold text-xs sm:text-sm md:text-lg mb-1 md:mb-2 line-clamp-2 text-gray-900 group-hover:text-brand-200 transition-colors">
-            {product.name}
-          </h3>
-          <p className="text-gray-600 text-[10px] sm:text-xs md:text-sm mb-2 md:mb-4 line-clamp-1 md:line-clamp-2 leading-relaxed hidden sm:block">
-            {product.description}
-          </p>
-          <div className="flex items-center justify-between pt-2 md:pt-3 border-t border-gray-100">
-            <span className="text-brand-200 font-bold text-sm sm:text-lg md:text-2xl">
-              {formatPrice(product.price)}
-            </span>
-            <span className="text-[9px] sm:text-xs text-gray-500 bg-gray-100 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full">
-              {product.category}
-            </span>
+          <div className="p-2 sm:p-3 md:p-5">
+            <h3 className="font-bold text-xs sm:text-sm md:text-lg mb-1 md:mb-2 line-clamp-2 text-gray-900 group-hover:text-brand-200 transition-colors">
+              {product.name}
+            </h3>
+            <p className="text-gray-600 text-[10px] sm:text-xs md:text-sm mb-2 md:mb-4 line-clamp-1 md:line-clamp-2 leading-relaxed hidden sm:block">
+              {product.description}
+            </p>
+            <div className="flex items-center justify-between pt-2 md:pt-3 border-t border-gray-100">
+              <span className="text-brand-200 font-bold text-sm sm:text-lg md:text-2xl">
+                {formatPrice(product.price)}
+              </span>
+              <span className="text-[9px] sm:text-xs text-gray-500 bg-gray-100 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full">
+                {product.category}
+              </span>
+            </div>
           </div>
         </div>
       </Link>

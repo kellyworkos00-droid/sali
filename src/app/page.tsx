@@ -12,98 +12,111 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative text-white overflow-hidden min-h-[700px] flex items-center">
-        {/* Background Image with Zoom Animation */}
-        <div className="absolute inset-0 scale-105 animate-[zoom_20s_ease-in-out_infinite]">
+      <section className="relative text-white overflow-hidden min-h-[90vh] flex items-center">
+        {/* Background Image with Parallax Effect */}
+        <div className="absolute inset-0 scale-110">
           <Image
             src="/herro.jpeg"
             alt="Sali Products - Tools and Machinery"
             fill
-            className="object-cover"
+            className="object-cover animate-[slowZoom_30s_ease-in-out_infinite]"
             priority
           />
         </div>
         
-        {/* Gradient Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-r from-red-900/90 via-black/80 to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        {/* Enhanced Gradient Overlays */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-red-900/85 to-black/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/80"></div>
         
-        {/* Animated Pattern Overlay */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 animate-[slide_30s_linear_infinite]" style={{
-            backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(255,255,255,.05) 40px, rgba(255,255,255,.05) 80px)'
+        {/* Animated Mesh Pattern */}
+        <div className="absolute inset-0 opacity-[0.07]">
+          <div className="absolute inset-0 animate-[slide_40s_linear_infinite]" style={{
+            backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 50px, rgba(255,255,255,.1) 50px, rgba(255,255,255,.1) 100px), repeating-linear-gradient(-45deg, transparent, transparent 50px, rgba(255,255,255,.05) 50px, rgba(255,255,255,.05) 100px)'
           }}></div>
         </div>
         
-        <div className="container mx-auto px-4 relative z-10 py-20">
-          <div className="max-w-3xl space-y-8">
-            {/* Trust Badges */}
-            <div className="flex flex-wrap gap-4 animate-[fadeIn_1s_ease-in]">
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 hover:animate-[bounce3d_1s_ease-in-out_infinite] transform-3d hover-lift-3d">
-                <Shield className="text-yellow-400" size={20} />
-                <span className="text-sm font-medium">Trusted Quality</span>
+        {/* Floating Particles */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-2 h-2 bg-yellow-400 rounded-full animate-[float_6s_ease-in-out_infinite] opacity-40"></div>
+          <div className="absolute top-40 right-20 w-3 h-3 bg-red-400 rounded-full animate-[float_8s_ease-in-out_infinite] opacity-30"></div>
+          <div className="absolute bottom-32 left-1/4 w-2 h-2 bg-white rounded-full animate-[float_7s_ease-in-out_infinite] opacity-50"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 md:py-24">
+          <div className="max-w-4xl">
+            {/* Trust Badges - Enhanced */}
+            <div className="flex flex-wrap gap-3 mb-8 animate-[fadeInDown_0.8s_ease-out]">
+              <div className="group flex items-center gap-2 bg-gradient-to-r from-white/15 to-white/5 backdrop-blur-md px-5 py-2.5 rounded-full border border-white/30 shadow-lg hover:scale-105 hover:bg-white/20 transition-all duration-300">
+                <Shield className="text-yellow-400 group-hover:scale-110 transition-transform" size={22} />
+                <span className="text-sm md:text-base font-semibold">ISO Certified</span>
               </div>
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
-                <Award className="text-yellow-400" size={20} />
-                <span className="text-sm font-medium">10+ Years</span>
+              <div className="group flex items-center gap-2 bg-gradient-to-r from-white/15 to-white/5 backdrop-blur-md px-5 py-2.5 rounded-full border border-white/30 shadow-lg hover:scale-105 hover:bg-white/20 transition-all duration-300">
+                <Award className="text-yellow-400 group-hover:scale-110 transition-transform" size={22} />
+                <span className="text-sm md:text-base font-semibold">10+ Years</span>
               </div>
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
-                <Star className="text-yellow-400" size={20} />
-                <span className="text-sm font-medium">5000+ Products</span>
+              <div className="group flex items-center gap-2 bg-gradient-to-r from-white/15 to-white/5 backdrop-blur-md px-5 py-2.5 rounded-full border border-white/30 shadow-lg hover:scale-105 hover:bg-white/20 transition-all duration-300">
+                <Star className="text-yellow-400 group-hover:scale-110 transition-transform" size={22} />
+                <span className="text-sm md:text-base font-semibold">5000+ Products</span>
               </div>
             </div>
 
-            {/* Main Heading with Animation */}
-            <h1 className="text-5xl md:text-7xl font-extrabold leading-tight animate-[slideUp_1s_ease-out]">
-              <span className="block mb-2">Quality Tools &</span>
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-300 to-yellow-300">
-                Machines for Every Job
+            {/* Main Heading - Dramatically Enhanced */}
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-black leading-[1.1] mb-6 animate-[slideUp_0.8s_ease-out]">
+              <span className="block mb-3 drop-shadow-2xl">Premium Tools &</span>
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-orange-400 to-yellow-300 drop-shadow-lg animate-[shimmer_3s_ease-in-out_infinite]">
+                Machines for Pros
               </span>
             </h1>
             
-            {/* Description */}
-            <p className="text-xl md:text-2xl text-gray-100 leading-relaxed animate-[slideUp_1s_ease-out_0.2s_both]">
-              Sali Products Kenya is your trusted supplier of <span className="text-yellow-300 font-semibold">premium tools</span>, <span className="text-yellow-300 font-semibold">machines</span>, and <span className="text-yellow-300 font-semibold">industrial supplies</span> across Kenya.
+            {/* Enhanced Description */}
+            <p className="text-lg sm:text-xl lg:text-2xl text-gray-100 leading-relaxed mb-8 max-w-3xl animate-[slideUp_0.8s_ease-out_0.2s_both] drop-shadow-md">
+              Kenya's leading supplier of <span className="text-yellow-300 font-bold">industrial-grade tools</span>, <span className="text-yellow-300 font-bold">heavy machinery</span>, and <span className="text-yellow-300 font-bold">professional equipment</span>. Trusted by contractors, businesses, and DIY enthusiasts nationwide.
             </p>
             
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 animate-[slideUp_1s_ease-out_0.4s_both]">
+            {/* CTA Buttons - Enhanced */}
+            <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-[slideUp_0.8s_ease-out_0.4s_both]">
               <Link
                 href="/products"
-                className="group relative bg-brand-200 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-brand-200 transition-all duration-300 flex items-center justify-center gap-3 shadow-2xl hover:shadow-brand-200/50 overflow-hidden perspective-container transform-3d hover-lift-3d"
+                className="group relative bg-gradient-to-r from-red-600 to-orange-500 text-white px-12 py-5 rounded-2xl font-bold text-lg hover:from-red-700 hover:to-orange-600 transition-all duration-300 flex items-center justify-center gap-3 shadow-2xl hover:shadow-red-500/50 hover:scale-105 overflow-hidden"
               >
-                <span className="absolute inset-0 bg-gradient-to-r from-brand-200 to-brand-200 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                <span className="relative">Shop Now</span>
-                <ArrowRight className="relative group-hover:translate-x-1 transition-transform" size={24} />
+                <span className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                <span className="relative z-10">Explore Products</span>
+                <ArrowRight className="relative z-10 group-hover:translate-x-2 transition-transform" size={24} />
               </Link>
               <Link
                 href="/contact"
-                className="group bg-white/10 backdrop-blur-md border-2 border-white text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300 shadow-xl hover:scale-105"
+                className="group relative bg-white/10 backdrop-blur-md border-2 border-white/50 text-white px-12 py-5 rounded-2xl font-bold text-lg hover:bg-white hover:text-gray-900 hover:border-white transition-all duration-300 shadow-xl hover:scale-105 overflow-hidden"
               >
-                Contact Us
+                <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                <span className="relative z-10">Get Quote</span>
               </Link>
             </div>
 
-            {/* Quick Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-8 animate-[fadeIn_1s_ease-in_0.6s_both]">
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-yellow-300 mb-1">5000+</div>
-                <div className="text-sm md:text-base text-gray-300">Products</div>
+            {/* Enhanced Quick Stats */}
+            <div className="grid grid-cols-3 gap-4 sm:gap-8 pt-6 border-t border-white/20 animate-[fadeIn_1s_ease-in_0.6s_both]">
+              <div className="text-center group cursor-pointer">
+                <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-yellow-300 to-orange-400 mb-2 group-hover:scale-110 transition-transform">5000+</div>
+                <div className="text-xs sm:text-sm lg:text-base text-gray-300 font-semibold">Products Available</div>
               </div>
-              <div className="text-center border-l border-r border-white/20">
-                <div className="text-3xl md:text-4xl font-bold text-yellow-300 mb-1">10+</div>
-                <div className="text-sm md:text-base text-gray-300">Years Experience</div>
+              <div className="text-center border-l border-r border-white/30 group cursor-pointer">
+                <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-yellow-300 to-orange-400 mb-2 group-hover:scale-110 transition-transform">10+</div>
+                <div className="text-xs sm:text-sm lg:text-base text-gray-300 font-semibold">Years in Business</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-yellow-300 mb-1">1000+</div>
-                <div className="text-sm md:text-base text-gray-300">Happy Clients</div>
+              <div className="text-center group cursor-pointer">
+                <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-yellow-300 to-orange-400 mb-2 group-hover:scale-110 transition-transform">1000+</div>
+                <div className="text-xs sm:text-sm lg:text-base text-gray-300 font-semibold">Satisfied Clients</div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Decorative Elements */}
-        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent"></div>
+        {/* Decorative Bottom Wave */}
+        <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white via-white/80 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+          <svg className="relative block w-full h-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="fill-white"></path>
+          </svg>
+        </div>
       </section>
 
       {/* Features Section */}
