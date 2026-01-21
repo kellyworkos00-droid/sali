@@ -42,6 +42,64 @@ export default function Navbar() {
 
   return (
     <>
+      {/* Mobile Top Header with Logo */}
+      <header className="md:hidden fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl shadow-lg">
+        <div className="flex items-center justify-between px-4 py-3">
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo.png"
+              alt="Sali Products Kenya"
+              width={140}
+              height={70}
+              className="h-10 w-auto"
+              priority
+            />
+          </Link>
+          
+          <div className="flex items-center gap-2">
+            <button 
+              onClick={() => setShowSearch(!showSearch)}
+              className={`p-2 rounded-lg transition-all ${
+                showSearch
+                  ? "bg-blue-500 text-white shadow-md"
+                  : "text-gray-700 active:bg-gray-100"
+              }`}
+            >
+              <Search size={20} />
+            </button>
+            
+            <Link 
+              href="/account" 
+              className="p-2 rounded-lg text-gray-700 active:bg-gray-100 transition-all"
+            >
+              <User size={20} />
+            </Link>
+          </div>
+        </div>
+        
+        {/* Mobile Search Bar */}
+        {showSearch && (
+          <div className="px-4 pb-3 animate-[slideUp_0.3s_ease-out]">
+            <form onSubmit={handleSearch} className="flex gap-2">
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search products..."
+                className="flex-1 px-4 py-2.5 rounded-lg border-2 border-gray-200 focus:border-blue-500 focus:outline-none font-medium"
+                autoFocus
+              />
+              <button
+                type="submit"
+                className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 py-2.5 rounded-lg font-bold active:scale-95 transition-all shadow-lg"
+              >
+                <Search size={18} />
+              </button>
+            </form>
+          </div>
+        )}
+      </header>
+
       {/* Desktop Navigation */}
       <nav className={`hidden md:block fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
@@ -338,7 +396,8 @@ export default function Navbar() {
       {/* Spacer for desktop */}
       <div className="hidden md:block h-20"></div>
       
-      {/* Spacer for mobile */}
+      {/* Spacer for mobile - top header + bottom nav */}
+      <div className="md:hidden h-16"></div>
       <div className="md:hidden h-20"></div>
     </>
   );
