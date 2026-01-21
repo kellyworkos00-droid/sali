@@ -2,10 +2,30 @@
 
 import { Award, Target, Users, Zap, Shield, TrendingUp } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+      {/* Decorative Spinning Saw Blade */}
+      <div className="absolute top-40 right-10 opacity-5 pointer-events-none hidden lg:block">
+        <Image
+          src="/saw blade.png"
+          alt=""
+          width={250}
+          height={250}
+          className="animate-[spinSlow_20s_linear_infinite]"
+        />
+      </div>
+      <div className="absolute bottom-40 left-10 opacity-5 pointer-events-none hidden lg:block">
+        <Image
+          src="/saw blade.png"
+          alt=""
+          width={220}
+          height={220}
+          className="animate-[spinSlow_18s_linear_infinite_reverse]"
+        />
+      </div>
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-brand-200 to-brand-200 text-white py-20">
         <div className="container mx-auto px-4 text-center">

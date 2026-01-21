@@ -1,5 +1,6 @@
 import { getProducts } from "@/lib/products";
 import ProductCard from "@/components/ProductCard";
+import Image from "next/image";
 import { Metadata } from "next";
 import Link from "next/link";
 import { Package, Wrench, Cog, Box, Filter, SlidersHorizontal, Grid3x3, List } from "lucide-react";
@@ -21,7 +22,17 @@ export default async function ProductsPage({
     : allProducts;
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 relative overflow-hidden">
+      {/* Decorative Spinning Saw Blade */}
+      <div className="absolute top-40 right-5 opacity-5 pointer-events-none hidden lg:block">
+        <Image
+          src="/saw blade.png"
+          alt=""
+          width={200}
+          height={200}
+          className="animate-[spinSlow_18s_linear_infinite]"
+        />
+      </div>
       {/* Header Section - Enhanced */}
       <div className="relative bg-gradient-to-r from-brand-500 to-brand-700 text-white py-20 overflow-hidden">
         {/* Decorative Pattern */}

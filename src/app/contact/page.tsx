@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Mail, Phone, MapPin, Send, Clock, MessageCircle, Building2, CheckCircle, Headphones } from "lucide-react";
 import toast from "react-hot-toast";
+import Image from "next/image";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -29,8 +30,29 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pattern-diagonal relative">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pattern-diagonal relative overflow-hidden">
       <div className="absolute inset-0 bg-white/90"></div>
+      
+      {/* Decorative Spinning Saw Blade */}
+      <div className="absolute top-32 right-10 opacity-5 pointer-events-none hidden md:block z-0">
+        <Image
+          src="/saw blade.png"
+          alt=""
+          width={180}
+          height={180}
+          className="animate-[spinSlow_16s_linear_infinite]"
+        />
+      </div>
+      <div className="absolute bottom-32 left-10 opacity-5 pointer-events-none hidden lg:block z-0">
+        <Image
+          src="/saw blade.png"
+          alt=""
+          width={200}
+          height={200}
+          className="animate-[spinSlow_14s_linear_infinite_reverse]"
+        />
+      </div>
+      
       {/* Enhanced Header Section */}
       <div className="relative bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white py-24 overflow-hidden z-10">
         {/* Background Pattern */}

@@ -4,7 +4,26 @@ import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from "lucide-react"
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-gray-900 text-gray-300 relative overflow-hidden">
+      {/* Decorative Spinning Saw Blades */}
+      <div className="absolute top-10 right-10 opacity-5 pointer-events-none">
+        <Image
+          src="/saw blade.png"
+          alt=""
+          width={200}
+          height={200}
+          className="animate-[spinSlow_15s_linear_infinite]"
+        />
+      </div>
+      <div className="absolute bottom-10 left-10 opacity-5 pointer-events-none">
+        <Image
+          src="/saw blade.png"
+          alt=""
+          width={180}
+          height={180}
+          className="animate-[spinSlow_12s_linear_infinite_reverse]"
+        />
+      </div>
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
