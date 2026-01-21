@@ -299,4 +299,90 @@ body {
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(180deg, #2563eb, #1d4ed8);
   }
+
+  /* Background Patterns */
+  .pattern-dots {
+    background-image: radial-gradient(circle, rgba(59, 130, 246, 0.15) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .pattern-grid {
+    background-image: 
+      linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+
+  .pattern-diagonal {
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 40px,
+      rgba(59, 130, 246, 0.05) 40px,
+      rgba(59, 130, 246, 0.05) 80px
+    );
+  }
+
+  .pattern-waves {
+    background-image: 
+      radial-gradient(circle at 100% 150%, rgba(59, 130, 246, 0.1) 24%, transparent 24%, transparent 28%, rgba(59, 130, 246, 0.1) 28%, rgba(59, 130, 246, 0.1) 36%, transparent 36%, transparent 40%, transparent 40%),
+      radial-gradient(circle at 0 150%, rgba(59, 130, 246, 0.1) 24%, transparent 24%, transparent 28%, rgba(59, 130, 246, 0.1) 28%, rgba(59, 130, 246, 0.1) 36%, transparent 36%, transparent 40%, transparent 40%),
+      radial-gradient(circle at 50% 100%, rgba(59, 130, 246, 0.15) 10%, transparent 10%);
+    background-size: 100px 50px;
+  }
+
+  .pattern-circuit {
+    background-image: 
+      linear-gradient(transparent 50%, rgba(59, 130, 246, 0.05) 50%),
+      linear-gradient(90deg, transparent 50%, rgba(59, 130, 246, 0.05) 50%);
+    background-size: 60px 60px;
+  }
+
+  .pattern-hexagon {
+    background-image: 
+      radial-gradient(circle at 50% 100%, transparent 20%, rgba(59, 130, 246, 0.08) 21%, rgba(59, 130, 246, 0.08) 34%, transparent 35%),
+      radial-gradient(circle at 50% 0%, transparent 20%, rgba(59, 130, 246, 0.08) 21%, rgba(59, 130, 246, 0.08) 34%, transparent 35%);
+    background-size: 50px 86.6px;
+    background-position: 0 0, 25px 43.3px;
+  }
+
+  .pattern-topography {
+    background-image: 
+      repeating-linear-gradient(0deg, rgba(59, 130, 246, 0.03) 0px, transparent 1px, transparent 60px, rgba(59, 130, 246, 0.03) 61px),
+      repeating-linear-gradient(90deg, rgba(59, 130, 246, 0.03) 0px, transparent 1px, transparent 60px, rgba(59, 130, 246, 0.03) 61px),
+      repeating-linear-gradient(45deg, transparent 0px, transparent 60px, rgba(59, 130, 246, 0.03) 61px, transparent 62px);
+    background-size: 120px 120px;
+  }
+
+  .pattern-geometric {
+    background-image: 
+      linear-gradient(45deg, rgba(59, 130, 246, 0.1) 25%, transparent 25%),
+      linear-gradient(-45deg, rgba(59, 130, 246, 0.1) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, rgba(59, 130, 246, 0.1) 75%),
+      linear-gradient(-45deg, transparent 75%, rgba(59, 130, 246, 0.1) 75%);
+    background-size: 40px 40px;
+    background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+  }
+
+  .pattern-cross {
+    background-image: 
+      radial-gradient(circle, transparent 20%, rgba(59, 130, 246, 0.05) 20%, rgba(59, 130, 246, 0.05) 80%, transparent 80%, transparent),
+      radial-gradient(circle, transparent 20%, rgba(59, 130, 246, 0.05) 20%, rgba(59, 130, 246, 0.05) 80%, transparent 80%, transparent);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px;
+  }
+
+  /* Animated Patterns */
+  .pattern-animate {
+    animation: patternMove 30s linear infinite;
+  }
+
+  @keyframes patternMove {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100px 100px;
+    }
+  }
 }

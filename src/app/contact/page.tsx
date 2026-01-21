@@ -29,9 +29,10 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pattern-diagonal relative">
+      <div className="absolute inset-0 bg-white/90"></div>
       {/* Enhanced Header Section */}
-      <div className="relative bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white py-24 overflow-hidden">
+      <div className="relative bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white py-24 overflow-hidden z-10">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
@@ -68,7 +69,7 @@ export default function ContactPage() {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-16 lg:py-20">
+      <div className="container mx-auto px-4 py-16 lg:py-20 relative z-10">
         <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 max-w-7xl mx-auto">
           {/* Enhanced Contact Form */}
           <div className="lg:col-span-3 bg-white rounded-3xl shadow-2xl p-8 md:p-10 border border-gray-100">

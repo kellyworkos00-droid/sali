@@ -23,9 +23,10 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
     .slice(0, 4);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pattern-topography relative">
+      <div className="absolute inset-0 bg-white/80"></div>
       {/* Enhanced Breadcrumb */}
-      <div className="bg-white border-b shadow-sm">
+      <div className="bg-white border-b shadow-sm relative z-10">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center gap-2 text-sm">
             <Link href="/" className="text-gray-600 hover:text-brand-500 font-medium transition">Home</Link>
@@ -37,7 +38,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-8 lg:py-12">
+      <div className="container mx-auto px-4 py-8 lg:py-12 relative z-10">
         {/* Main Product Section */}
         <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 mb-16">
           {/* Product Image - Larger and Enhanced */}

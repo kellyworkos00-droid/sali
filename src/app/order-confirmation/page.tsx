@@ -10,9 +10,10 @@ function OrderConfirmationContent() {
   const orderId = searchParams.get("orderId") || "ORD-" + Math.random().toString(36).substring(7).toUpperCase();
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pattern-waves relative">
+      <div className="absolute inset-0 bg-white/85"></div>
       {/* Success Header */}
-      <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white py-16 overflow-hidden relative">
+      <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white py-16 overflow-hidden relative z-10">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(255,255,255,.1) 40px, rgba(255,255,255,.1) 80px)'
@@ -33,7 +34,7 @@ function OrderConfirmationContent() {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-16 max-w-5xl">
+      <div className="container mx-auto px-4 py-16 max-w-5xl relative z-10">
         {/* Order Number Card */}
         <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl shadow-xl p-8 mb-8 border-2 border-blue-200">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">

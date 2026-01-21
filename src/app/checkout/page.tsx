@@ -137,9 +137,10 @@ export default function CheckoutPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pattern-grid relative">
+      <div className="absolute inset-0 bg-white/85 pointer-events-none"></div>
       {/* Enhanced Header */}
-      <div className="bg-gradient-to-r from-brand-500 to-brand-600 text-white py-12 shadow-xl">
+      <div className="bg-gradient-to-r from-brand-500 to-brand-600 text-white py-12 shadow-xl relative z-10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-black mb-3">Secure Checkout</h1>
@@ -165,7 +166,7 @@ export default function CheckoutPage() {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-8 lg:py-12">
+      <div className="container mx-auto px-4 py-8 lg:py-12 relative z-10">
         <form onSubmit={handleSubmit}>
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Customer Information */}

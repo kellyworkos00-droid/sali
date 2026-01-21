@@ -120,8 +120,9 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-12 bg-gray-50">
-        <div className="container mx-auto px-4">
+      <section className="py-12 bg-gray-50 pattern-dots relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-transparent"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <ScrollReveal animation="blur">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-900">Why Choose Us</h2>
           </ScrollReveal>
@@ -164,8 +165,9 @@ export default function Home() {
       </section>
 
       {/* Categories Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
+      <section className="py-16 pattern-geometric relative">
+        <div className="absolute inset-0 bg-white/95"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <ScrollReveal animation="scale">
             <h2 className="text-3xl font-bold text-center mb-12">Shop by Category</h2>
           </ScrollReveal>
@@ -204,8 +206,9 @@ export default function Home() {
       </section>
 
       {/* Top Selling Products */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
+      <section className="py-16 bg-gray-50 pattern-circuit relative">
+        <div className="absolute inset-0 bg-gray-50/90"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <ScrollReveal animation="fade-up">
             <div className="flex items-center justify-between mb-8">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Top Selling Products</h2>
@@ -225,8 +228,9 @@ export default function Home() {
       </section>
 
       {/* Your Top Finds */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
+      <section className="py-16 pattern-hexagon relative">
+        <div className="absolute inset-0 bg-white/90"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <ScrollReveal animation="fade-up">
             <div className="flex items-center justify-between mb-8">
               <div>
