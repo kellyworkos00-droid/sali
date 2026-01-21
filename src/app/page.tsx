@@ -11,8 +11,8 @@ export default function Home() {
   const topFinds = products.slice(0, 8);
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="relative text-white overflow-hidden min-h-[90vh] flex items-center">
+      {/* Hero Section - Starts at top on mobile, below navbar on desktop */}
+      <section className="relative text-white overflow-hidden min-h-[90vh] flex items-center md:mt-0 -mt-20">
         {/* Background Image with Parallax Effect */}
         <div className="absolute inset-0 scale-110">
           <Image

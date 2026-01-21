@@ -396,9 +396,8 @@ export default function Navbar() {
       {/* Spacer for desktop */}
       <div className="hidden md:block h-20"></div>
       
-      {/* Spacer for mobile - top header + bottom nav */}
+      {/* Spacer for mobile bottom nav only */}
       <div className="md:hidden h-20"></div>
-      <div className="md:hidden h-24"></div>
     </>
   );
 }
