@@ -70,7 +70,7 @@ export default function Home() {
             
             {/* Enhanced Description */}
             <p className="text-lg sm:text-xl lg:text-2xl text-gray-100 leading-relaxed mb-8 max-w-3xl animate-[slideUp_0.8s_ease-out_0.2s_both] drop-shadow-md">
-              Kenya's leading supplier of <span className="text-yellow-300 font-bold">industrial-grade tools</span>, <span className="text-yellow-300 font-bold">heavy machinery</span>, and <span className="text-yellow-300 font-bold">professional equipment</span>. Trusted by contractors, businesses, and DIY enthusiasts nationwide.
+              Kenya&apos;s leading supplier of <span className="text-yellow-300 font-bold">industrial-grade tools</span>, <span className="text-yellow-300 font-bold">heavy machinery</span>, and <span className="text-yellow-300 font-bold">professional equipment</span>. Trusted by contractors, businesses, and DIY enthusiasts nationwide.
             </p>
             
             {/* CTA Buttons - Enhanced */}

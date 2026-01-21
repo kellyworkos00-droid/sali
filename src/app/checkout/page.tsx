@@ -178,7 +178,7 @@ export default function CheckoutPage() {
                   </div>
                   <div>
                     <h2 className="text-2xl font-bold text-gray-900">Contact Information</h2>
-                    <p className="text-sm text-gray-600">We'll use this to reach you about your order</p>
+                    <p className="text-sm text-gray-600">We&apos;ll use this to reach you about your order</p>
                   </div>
                 </div>
                 <div className="grid md:grid-cols-2 gap-6">
@@ -377,7 +377,7 @@ export default function CheckoutPage() {
                     />
                     <p className="text-xs text-gray-600 mt-2 flex items-start gap-2">
                       <CheckCircle size={14} className="text-green-600 mt-0.5" />
-                      You'll receive an M-Pesa prompt on this number to complete payment
+                      You&apos;ll receive an M-Pesa prompt on this number to complete payment
                     </p>
                   </div>
                 )}

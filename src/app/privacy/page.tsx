@@ -256,7 +256,7 @@ export default function PrivacyPage() {
               <div className="bg-brand-100 p-2 rounded-lg">
                 <Shield className="text-brand-600" size={24} />
               </div>
-              <h2 className="text-2xl font-bold text-gray-900">9. Children's Privacy</h2>
+              <h2 className="text-2xl font-bold text-gray-900">9. Children&apos;s Privacy</h2>
             </div>
             <div className="space-y-3 text-gray-700 leading-relaxed ml-12">
               <p>

@@ -38,7 +38,7 @@ export default async function SearchPage({
           </div>
           {searchQuery && (
             <p className="text-brand-100 text-lg">
-              {products.length} result{products.length !== 1 ? "s" : ""} found for "{q}"
+              {products.length} result{products.length !== 1 ? "s" : ""} found for &quot;{q}&quot;
             </p>
           )}
           {!searchQuery && (
