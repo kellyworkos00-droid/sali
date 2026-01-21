@@ -40,6 +40,35 @@ export default function Home() {
           <div className="absolute top-20 left-10 w-2 h-2 bg-yellow-400 rounded-full animate-[float_6s_ease-in-out_infinite] opacity-40"></div>
           <div className="absolute top-40 right-20 w-3 h-3 bg-red-400 rounded-full animate-[float_8s_ease-in-out_infinite] opacity-30"></div>
           <div className="absolute bottom-32 left-1/4 w-2 h-2 bg-white rounded-full animate-[float_7s_ease-in-out_infinite] opacity-50"></div>
+          
+          {/* Spinning Saw Blades */}
+          <div className="absolute top-10 right-10 md:top-20 md:right-32 opacity-20 hover:opacity-40 transition-opacity">
+            <Image
+              src="/saw blade.png"
+              alt="Saw Blade"
+              width={120}
+              height={120}
+              className="animate-[spinSlow_8s_linear_infinite]"
+            />
+          </div>
+          <div className="absolute bottom-20 left-16 md:bottom-32 md:left-40 opacity-15 hover:opacity-35 transition-opacity">
+            <Image
+              src="/saw blade.png"
+              alt="Saw Blade"
+              width={150}
+              height={150}
+              className="animate-[spinSlow_12s_linear_infinite_reverse]"
+            />
+          </div>
+          <div className="hidden md:block absolute top-1/2 right-20 opacity-10 hover:opacity-30 transition-opacity">
+            <Image
+              src="/saw blade.png"
+              alt="Saw Blade"
+              width={100}
+              height={100}
+              className="animate-[spinSlow_10s_linear_infinite]"
+            />
+          </div>
         </div>
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 md:py-24">
