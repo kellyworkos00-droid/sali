@@ -3,6 +3,7 @@ import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FullscreenButton from "@/components/FullscreenButton";
 
 export const metadata: Metadata = {
   title: "Sali Products Kenya - Tools, Machines & Supplies",
@@ -24,6 +25,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <FullscreenButton />
       </body>
     </html>
   );
