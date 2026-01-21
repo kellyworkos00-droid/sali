@@ -43,7 +43,7 @@ export default function Navbar() {
   return (
     <>
       {/* Mobile Top Header with Logo */}
-      <header className="md:hidden fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl shadow-lg">
+      <header className="md:hidden fixed top-2 left-2 right-2 z-50 bg-white/98 backdrop-blur-xl shadow-2xl rounded-2xl border border-gray-200/50">
         <div className="flex items-center justify-between px-4 py-3">
           <Link href="/" className="flex items-center">
             <Image
@@ -79,7 +79,7 @@ export default function Navbar() {
         
         {/* Mobile Search Bar */}
         {showSearch && (
-          <div className="px-4 pb-3 animate-[slideUp_0.3s_ease-out]">
+          <div className="px-4 pb-3 pt-2 border-t border-gray-100 animate-[slideUp_0.3s_ease-out]">
             <form onSubmit={handleSearch} className="flex gap-2">
               <input
                 type="text"
@@ -249,7 +249,7 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile Navigation - Floating Bottom Bar */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-t border-gray-200 shadow-2xl">
+      <nav className="md:hidden fixed bottom-2 left-2 right-2 z-50 bg-white/98 backdrop-blur-xl border border-gray-200/50 shadow-2xl rounded-2xl">
         <div className="grid grid-cols-5 gap-1 px-2 py-2">
           <Link 
             href="/" 
@@ -397,8 +397,8 @@ export default function Navbar() {
       <div className="hidden md:block h-20"></div>
       
       {/* Spacer for mobile - top header + bottom nav */}
-      <div className="md:hidden h-16"></div>
       <div className="md:hidden h-20"></div>
+      <div className="md:hidden h-24"></div>
     </>
   );
 }
