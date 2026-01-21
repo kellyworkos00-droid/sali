@@ -25,7 +25,7 @@ export default function Home() {
         </div>
         
         {/* Enhanced Gradient Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-red-900/85 to-black/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-blue-900/85 to-black/70"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/80"></div>
         
         {/* Animated Mesh Pattern */}
@@ -63,7 +63,7 @@ export default function Home() {
             {/* Main Heading - Dramatically Enhanced */}
             <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-black leading-[1.1] mb-6 animate-[slideUp_0.8s_ease-out]">
               <span className="block mb-3 drop-shadow-2xl">Premium Tools &</span>
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-orange-400 to-yellow-300 drop-shadow-lg animate-[shimmer_3s_ease-in-out_infinite]">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-sky-400 to-cyan-300 drop-shadow-lg animate-[shimmer_3s_ease-in-out_infinite]">
                 Machines for Pros
               </span>
             </h1>
@@ -77,7 +77,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-[slideUp_0.8s_ease-out_0.4s_both]">
               <Link
                 href="/products"
-                className="group relative bg-gradient-to-r from-red-600 to-orange-500 text-white px-12 py-5 rounded-2xl font-bold text-lg hover:from-red-700 hover:to-orange-600 transition-all duration-300 flex items-center justify-center gap-3 shadow-2xl hover:shadow-red-500/50 hover:scale-105 overflow-hidden"
+                className="group relative bg-gradient-to-r from-blue-600 to-blue-500 text-white px-12 py-5 rounded-2xl font-bold text-lg hover:from-blue-700 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-3 shadow-2xl hover:shadow-blue-500/50 hover:scale-105 overflow-hidden"
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></span>
                 <span className="relative z-10">Explore Products</span>
@@ -95,15 +95,15 @@ export default function Home() {
             {/* Enhanced Quick Stats */}
             <div className="grid grid-cols-3 gap-4 sm:gap-8 pt-6 border-t border-white/20 animate-[fadeIn_1s_ease-in_0.6s_both]">
               <div className="text-center group cursor-pointer">
-                <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-yellow-300 to-orange-400 mb-2 group-hover:scale-110 transition-transform">5000+</div>
+                <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-blue-300 to-cyan-400 mb-2 group-hover:scale-110 transition-transform">5000+</div>
                 <div className="text-xs sm:text-sm lg:text-base text-gray-300 font-semibold">Products Available</div>
               </div>
               <div className="text-center border-l border-r border-white/30 group cursor-pointer">
-                <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-yellow-300 to-orange-400 mb-2 group-hover:scale-110 transition-transform">10+</div>
+                <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-blue-300 to-cyan-400 mb-2 group-hover:scale-110 transition-transform">10+</div>
                 <div className="text-xs sm:text-sm lg:text-base text-gray-300 font-semibold">Years in Business</div>
               </div>
               <div className="text-center group cursor-pointer">
-                <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-yellow-300 to-orange-400 mb-2 group-hover:scale-110 transition-transform">1000+</div>
+                <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-blue-300 to-cyan-400 mb-2 group-hover:scale-110 transition-transform">1000+</div>
                 <div className="text-xs sm:text-sm lg:text-base text-gray-300 font-semibold">Satisfied Clients</div>
               </div>
             </div>
