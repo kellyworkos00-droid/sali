@@ -4,6 +4,7 @@ import { ArrowRight, Wrench, Package, Truck, Shield, Award, Star } from "lucide-
 import ScrollReveal from "@/components/ScrollReveal";
 import ProductCard from "@/components/ProductCard";
 import { getProducts } from "@/lib/products";
+import RecentlyViewed from "@/components/RecentlyViewed";
 
 export default function Home() {
   const products = getProducts();
@@ -280,6 +281,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Recently Viewed Products */}
+      <RecentlyViewed />
     </div>
   );
 }

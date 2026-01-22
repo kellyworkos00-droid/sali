@@ -1,8 +1,30 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function Footer() {
+  const [isStandalone, setIsStandalone] = useState(false);
+
+  useEffect(() => {
+    // Check if app is running in standalone mode (PWA)
+    const checkStandalone = () => {
+      const isStandaloneMode = window.matchMedia('(display-mode: standalone)').matches 
+        || (window.navigator as any).standalone 
+        || document.referrer.includes('android-app://');
+      setIsStandalone(isStandaloneMode);
+    };
+
+    checkStandalone();
+  }, []);
+
+  // Don't render footer in PWA/app mode
+  if (isStandalone) {
+    return null;
+  }
+
   return (
     <footer className="bg-gray-900 text-gray-300 relative overflow-hidden">
       {/* Decorative Spinning Saw Blades */}

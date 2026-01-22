@@ -7,6 +7,7 @@ import AddToCartButton from "@/components/AddToCartButton";
 import WishlistButton from "@/components/WishlistButton";
 import ProductCard from "@/components/ProductCard";
 import { Phone, Truck, Shield, Package, CheckCircle, Star, Award } from "lucide-react";
+import RecentlyViewedTracker from "@/components/RecentlyViewedTracker";
 
 export default async function ProductPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -24,6 +25,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pattern-topography relative">
+      <RecentlyViewedTracker product={product} />
       <div className="absolute inset-0 bg-white/80"></div>
       {/* Enhanced Breadcrumb */}
       <div className="bg-white border-b shadow-sm relative z-10">
