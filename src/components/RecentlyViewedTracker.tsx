@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { useRecentlyViewedStore } from "@/store/recentlyViewedStore";
-import { Product } from "@/types";
+import { Product } from "@/lib/products";
 
 interface RecentlyViewedTrackerProps {
   product: Product;
