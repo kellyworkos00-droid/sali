@@ -17,12 +17,13 @@ export const metadata: Metadata = {
     title: "Sali Products",
   },
   applicationName: "Sali Products Kenya",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
   themeColor: "#3b82f6",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-  },
 };
 
 export default function RootLayout({
